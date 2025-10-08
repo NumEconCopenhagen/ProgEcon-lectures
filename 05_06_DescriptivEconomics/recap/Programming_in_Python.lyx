@@ -1,0 +1,1402 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{appendixnumberbeamer}
+
+\usepackage{graphicx}
+\usepackage{subfig}
+
+\usetheme[progressbar=frametitle,block=fill,subsectionpage=progressbar]{metropolis}
+
+% margin
+\setbeamersize{text margin right=1.5cm}
+
+% colors
+\colorlet{DarkRed}{red!70!black}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{alerted text}{fg=DarkRed}
+\setbeamercolor{progress bar}{fg=DarkRed}
+\setbeamercolor{button}{bg=DarkRed}
+
+% width of seperators
+\makeatletter
+\setlength{\metropolis@titleseparator@linewidth}{1pt}
+\setlength{\metropolis@progressonsectionpage@linewidth}{1pt}
+\setlength{\metropolis@progressinheadfoot@linewidth}{1pt}
+\makeatother
+
+% new alert block
+\newlength\origleftmargini
+\setlength\origleftmargini\leftmargini
+\setbeamertemplate{itemize/enumerate body begin}{\setlength{\leftmargini}{4mm}}
+\let\oldalertblock\alertblock
+\let\oldendalertblock\endalertblock
+\def\alertblock{\begingroup \setbeamertemplate{itemize/enumerate body begin}{\setlength{\leftmargini}{\origleftmargini}} \oldalertblock}
+\def\endalertblock{\oldendalertblock \endgroup}
+\setbeamertemplate{mini frame}{}
+\setbeamertemplate{mini frame in current section}{}
+\setbeamertemplate{mini frame in current subsection}{}
+\setbeamercolor{section in head/foot}{fg=normal text.bg, bg=structure.fg}
+\setbeamercolor{subsection in head/foot}{fg=normal text.bg, bg=structure.fg}
+
+% footer
+\makeatletter
+\setbeamertemplate{footline}{%
+    \begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}{section in head/foot}
+      \vskip1pt\insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll \insertframenumber{} / \inserttotalframenumber \hskip2pt}\vskip3pt% 
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+    \end{beamercolorbox}
+}
+\makeatother
+
+% toc
+\setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsectionnumber.~\inserttocsection\par}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection\par}
+
+% code
+\usepackage{xcolor}
+\usepackage{listings}
+
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{background}{HTML}{F5F5F5}
+\definecolor{keyword}{HTML}{4B69C6}
+\definecolor{string}{HTML}{448C27}
+\definecolor{comment}{HTML}{448C27}
+
+\usepackage{inconsolata}
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{comment},
+    keywordstyle=\color{keyword},
+    stringstyle=\color{string},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4,
+	showlines=true
+}
+
+\lstset{style=mystyle}
+% Added by lyx2lyx
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\end_preamble
+\options t,10pt
+\use_default_options false
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "lmodern" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 1
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style danish
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+title{Programming in Python
+\backslash
+vspace{-2mm}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+subtitle{Programming for Economists} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+author{Jeppe Druedahl}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+date{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+maketitle
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Learning phases
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+You have worked with:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+DataCamp courses
+\end_layout
+
+\begin_layout Enumerate
+Lecture videos week 37-38
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+A lot of abstract new concepts!
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+OK to be confused now
+\end_layout
+
+\begin_layout Enumerate
+This is the last abstract stuff
+\end_layout
+
+\begin_layout Enumerate
+Afterwards it becomes more concrete and hands-on
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout FragileFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Classes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+A 
+\series bold
+class
+\series default
+ defines the 
+\series bold
+type
+\series default
+ of an object
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{.attribute}
+\end_layout
+
+\end_inset
+
+,
+ state
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{.method()}
+\end_layout
+
+\end_inset
+
+,
+ action (incl.
+ changing self)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Inheritance
+\series default
+ (of methods) (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{class Child(Parent)}
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[language=Python,basicstyle=
+\backslash
+linespread{1.3}
+\backslash
+ttfamily
+\backslash
+footnotesize,
+\end_layout
+
+\begin_layout Plain Layout
+
+numbers=left,frame=single,backgroundcolor=
+\backslash
+color{background}]
+\end_layout
+
+\begin_layout Plain Layout
+
+class Parent:
+\end_layout
+
+\begin_layout Plain Layout
+
+    def __init__(self,value):
+ self.value = value
+\end_layout
+
+\begin_layout Plain Layout
+
+    def double(self):
+ return self.value * 2
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+class Child(Parent):
+\end_layout
+
+\begin_layout Plain Layout
+
+    def half(self):
+ return self.value / 2
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\end_layout
+
+\begin_layout Plain Layout
+
+child = Child(10)
+\end_layout
+
+\begin_layout Plain Layout
+
+print(child.value) # 10
+\end_layout
+
+\begin_layout Plain Layout
+
+print(child.double()) # 20
+\end_layout
+
+\begin_layout Plain Layout
+
+print(child.half()) # 5.0
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout FragileFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+References
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Variables are references to an instance of an object
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{=}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+assigns a reference
+\series default
+ (
+\emph on
+not a copy!
+\emph default
+)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Question:
+
+\series default
+ What does 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{a}
+\end_layout
+
+\end_inset
+
+ end up as?
+ What if 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{a = [1,2,3]}
+\end_layout
+
+\end_inset
+
+?
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[language=Python,basicstyle=
+\backslash
+linespread{1.3}
+\backslash
+ttfamily
+\backslash
+footnotesize,
+\end_layout
+
+\begin_layout Plain Layout
+
+numbers=left,frame=single,backgroundcolor=
+\backslash
+color{background}]
+\end_layout
+
+\begin_layout Plain Layout
+
+a = np.array([1,2,3])
+\end_layout
+
+\begin_layout Plain Layout
+
+b = a
+\end_layout
+
+\begin_layout Plain Layout
+
+c = a[1:] # slicing
+\end_layout
+
+\begin_layout Plain Layout
+
+b[0] = 3 # indexing
+\end_layout
+
+\begin_layout Plain Layout
+
+c[0] = 3
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout FragileFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Types and in-place operations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Atomic types:
+
+\series default
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{int,
+ float,
+ str,
+ bool,}
+\end_layout
+
+\end_inset
+
+ etc.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Containers 
+\series default
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{list,
+ tuple,
+ dict,
+ set,
+ np.array,}
+\end_layout
+
+\end_inset
+
+ etc.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Mutables
+\series default
+ (e.g.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{list,
+ np.array}
+\end_layout
+
+\end_inset
+
+)
+\series bold
+ 
+\series default
+can change in-place
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+In-place operators
+\series default
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{+=,
+ -=}
+\end_layout
+
+\end_inset
+
+ etc.)
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Slicing
+\series default
+:
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{x[:] = x + y}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Immutables
+\series default
+ (e.g.
+ atomic types and tuples) can never change
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Questions:
+ 
+\series default
+What does 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{y}
+\end_layout
+
+\end_inset
+
+ end up as?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[language=Python,basicstyle=
+\backslash
+linespread{1.3}
+\backslash
+ttfamily
+\backslash
+footnotesize,
+\end_layout
+
+\begin_layout Plain Layout
+
+numbers=left,frame=single,backgroundcolor=
+\backslash
+color{background}]
+\end_layout
+
+\begin_layout Plain Layout
+
+x = np.array([1,2,3])
+\end_layout
+
+\begin_layout Plain Layout
+
+y = x
+\end_layout
+
+\begin_layout Plain Layout
+
+x += 1
+\end_layout
+
+\begin_layout Plain Layout
+
+x[:] = x + 1
+\end_layout
+
+\begin_layout Plain Layout
+
+x = x + 1
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout FragileFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Functions and scope
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Functions are objects
+\series default
+ (can e.g.
+ be arguments in functions) 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Unlike in math:
+\end_layout
+
+\begin_layout Enumerate
+Can change its arguments (side-effects)
+\end_layout
+
+\begin_layout Enumerate
+Can call itself (recursion)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Variables can both be 
+\series bold
+local scope 
+\series default
+(good) or 
+\series bold
+global scope
+\series default
+ (bad) 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Questions:
+ 
+\series default
+What is the output?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[language=Python,basicstyle=
+\backslash
+linespread{1.3}
+\backslash
+ttfamily
+\backslash
+footnotesize,
+\end_layout
+
+\begin_layout Plain Layout
+
+numbers=left,frame=single,backgroundcolor=
+\backslash
+color{background}]
+\end_layout
+
+\begin_layout Plain Layout
+
+a = 1
+\end_layout
+
+\begin_layout Plain Layout
+
+def f(x):
+\end_layout
+
+\begin_layout Plain Layout
+
+	return x+a
+\end_layout
+
+\begin_layout Plain Layout
+
+print(f(1))
+\end_layout
+
+\begin_layout Plain Layout
+
+a = 2
+\end_layout
+
+\begin_layout Plain Layout
+
+print(f(1))
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout FragileFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Conditionals and loops
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Comparison 
+\series default
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{==,
+ !=,
+ <,
+ <=,
+ not,
+ and,
+ or}
+\end_layout
+
+\end_inset
+
+ etc.) 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Conditionals 
+\series default
+(
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{if,
+ elif,
+ else}
+\end_layout
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Loops
+\series default
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{for,
+ while,
+ continue,
+ break}
+\end_layout
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Convergence
+\series default
+ (tolerance in optimizer or root-finder/equation-solver) 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Questions:
+ 
+\series default
+How could this be implemented with a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{while}
+\end_layout
+
+\end_inset
+
+ loop?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[language=Python,basicstyle=
+\backslash
+linespread{1.3}
+\backslash
+ttfamily
+\backslash
+footnotesize,
+\end_layout
+
+\begin_layout Plain Layout
+
+numbers=left,frame=single,backgroundcolor=
+\backslash
+color{background}]
+\end_layout
+
+\begin_layout Plain Layout
+
+x = x0
+\end_layout
+
+\begin_layout Plain Layout
+
+for i in range(n):
+\end_layout
+
+\begin_layout Plain Layout
+
+    y = evaluate(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+    if check(y):
+ break
+\end_layout
+
+\begin_layout Plain Layout
+
+    x = update(x,y)
+\end_layout
+
+\begin_layout Plain Layout
+
+else:
+\end_layout
+
+\begin_layout Plain Layout
+
+    raise ValueError('did not converge')
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout FragileFrame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Decimal numbers are not exact
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Never use exactness for decimal numbers 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Order of computation matter 
+\end_layout
+
+\begin_layout Itemize
+Best with numbers are around 1 (underflow and overflow) 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Division,
+ exp,
+ log etc.
+ are (costly) approximations 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Function approximation and interpolation often needed
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Questions:
+ 
+\series default
+Which are 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{True}
+\end_layout
+
+\end_inset
+
+ and which are 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{False}
+\end_layout
+
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[language=Python,basicstyle=
+\backslash
+linespread{1.3}
+\backslash
+ttfamily
+\backslash
+footnotesize,
+\end_layout
+
+\begin_layout Plain Layout
+
+numbers=left,frame=single,backgroundcolor=
+\backslash
+color{background}]
+\end_layout
+
+\begin_layout Plain Layout
+
+print(0.1 + 0.2 == 0.3)
+\end_layout
+
+\begin_layout Plain Layout
+
+print(0.5 + 0.5 == 1.0)
+\end_layout
+
+\begin_layout Plain Layout
+
+print(np.isclose(0.1+0.2,0.3))
+\end_layout
+
+\begin_layout Plain Layout
+
+print(np.isclose(1e-200*1e200*1e200*1e-200,1.0))
+\end_layout
+
+\begin_layout Plain Layout
+
+print(np.isinf(1e-200*(1e200*1e200)*1e-200))
+\end_layout
+
+\begin_layout Plain Layout
+
+print(np.isclose(1e200*(1e-200*1e-200)*1e200,0.0))
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
