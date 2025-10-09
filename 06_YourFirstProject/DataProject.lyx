@@ -191,7 +191,7 @@ Apply data analysis methods
 \end_layout
 
 \begin_layout Enumerate
-Make the figures nice to look at and easy to understand
+Present results in text form and in easy-to-understand figures
 \end_layout
 
 \begin_layout Enumerate
@@ -204,10 +204,6 @@ Structure a code project
 
 \begin_layout Enumerate
 Document code
-\end_layout
-
-\begin_layout Enumerate
-Present results in text form and in figures
 \end_layout
 
 \end_deeper
