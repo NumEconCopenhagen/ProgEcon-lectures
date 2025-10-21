@@ -11,6 +11,8 @@ nit = 0
 init_guess = None
 obj = None
 
+
+## Initialize and collect iteration history for scipy.optimize.minimize
 def init_collector(obj_func, init_guess_in):
     """Initialize the iteration history before calling scipy.optimize.minimize."""
     global x1s, x2s, fs, nit, obj, init_guess
@@ -22,6 +24,8 @@ def init_collector(obj_func, init_guess_in):
     fs  = [obj(init_guess)]  # objective at initial guess
     nit = 0
 
+
+# Called in every iteration of SLSQP to collect the history.
 def collect(x):
     """SLSQP callback: collects iterate x and objective value."""
     global x1s, x2s, fs, nit, obj
@@ -29,6 +33,9 @@ def collect(x):
     x2s.append(x[1])
     fs.append(obj(x))
     nit += 1
+
+
+## Plots the trajectory of the objective (or utility) over iterations.
 
 def convergence_steps(plot_utility=False, ax=None, show=True, return_data=False):
     """
