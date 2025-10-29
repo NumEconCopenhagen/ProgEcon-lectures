@@ -494,7 +494,7 @@ instantaneous inflation rate
 \begin_inset Formula 
 \begin{align*}
 \pi_{t}^{12,\alpha} & =\left(\Pi_{k=0}^{11}\left(1+\pi_{t-k}\right)^{\kappa\left(k,\alpha\right)}\right)-1\\
-\kappa\left(k,\alpha\right) & =\frac{\left(T-k\right)^{\alpha}}{\sum\left(T-k\right)^{\alpha}}T
+\kappa\left(k,\alpha\right) & =\frac{\left(12-k\right)^{\alpha}}{\sum\left(12-k\right)^{\alpha}}12
 \end{align*}
 
 \end_inset
@@ -671,7 +671,7 @@ status open
 
 
 \backslash
-lstinline{PRIS113}
+lstinline{PRIS111}
 \end_layout
 
 \end_inset
