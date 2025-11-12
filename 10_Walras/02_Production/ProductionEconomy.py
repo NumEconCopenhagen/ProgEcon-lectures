@@ -7,13 +7,24 @@ from scipy import optimize
 
 class ProductionEconomyClass():
 
-    def __init__(self,load=None,blank=False):
+    def __init__(self,load=None,blank=False,**kwargs):
         """ initialize model """
 
-        if load is not None:
+        if blank:
+        
+            pass
+        
+        elif not load is None:
+        
             self.load(load)
-        elif not blank:
+        
+        else:
+            
             self.setup()
+
+            # override parameters
+            for key,value in kwargs.items():
+                self.par.__dict__[key] = value
 
     def setup(self):
 
@@ -142,26 +153,27 @@ class ProductionEconomyClass():
         sol.goods_mkt_clearing = par.Nw*sol.c_w_star + par.Nc*sol.c_c_star - sol.y_star
         sol.labor_mkt_clearing = par.Nw*sol.l_w_star + par.Nc*sol.l_c_star - sol.l_star
     
-    def find_equilibrium(self):
+    def find_equilibrium(self,do_print=False,do_show_results=True):
         """ find equilibrium wage """
 
         par = self.par
         sol = self.sol
 
         # a. grid search
-        print('grid search:')
+        if do_print: print('grid search:')
         for i,w in enumerate(par.grid_w):
+            
             sol.w = w
             self.evaluate_equilibrium()
             par.grid_mkt_clearing[i] = sol.goods_mkt_clearing
-            print(f' w = {w:.2f} -> {par.grid_mkt_clearing[i]:12.8f}')
+            if do_print: print(f' w = {w:.2f} -> {par.grid_mkt_clearing[i]:12.8f}')
         
-        print('')
+        if do_print: print('')
 
         # b. find bounds
         left = np.max(par.grid_w[par.grid_mkt_clearing < 0])
         right = np.min(par.grid_w[par.grid_mkt_clearing > 0])
-        print(f'equilibrium wage must be in [{left:.2f},{right:.2f}]\n')            
+        if do_print: print(f'equilibrium wage must be in [{left:.2f},{right:.2f}]\n')            
 
         # c. bisection search
         def obj(w):
@@ -171,9 +183,10 @@ class ProductionEconomyClass():
 
         res = optimize.root_scalar(obj,bracket=[left,right],method='bisect')
         sol.w = res.root
-        print(f'the equilibrium wage is {sol.w:.4f}\n')
+        if do_print: print(f'the equilibrium wage is {sol.w:.4f}\n')
+        self.evaluate_equilibrium() # final evaluation
 
-        self.show_results()
+        if do_show_results: self.show_results()
 
     def show_results(self):
         """ show results """
@@ -192,14 +205,6 @@ class ProductionEconomyClass():
     # copy and save #
     #################
 
-    def as_dict(self):
-        """ convert model to dictionary """
-
-        return {
-            'par': self.par.__dict__,
-            'sol': self.sol.__dict__
-        }
-
     def copy(self):
         """ create a copy of the model """
 
@@ -208,6 +213,14 @@ class ProductionEconomyClass():
         new_model.sol = deepcopy(self.sol)
         return new_model
 
+    def as_dict(self):
+        """ convert model to dictionary """
+
+        return {
+            'par': self.par.__dict__,
+            'sol': self.sol.__dict__
+        }
+    
     def save(self,filename):
         """ save model """
 

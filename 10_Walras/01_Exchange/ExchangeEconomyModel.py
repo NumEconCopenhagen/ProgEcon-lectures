@@ -17,6 +17,7 @@ class ExchangeEconomyModelClass:
         # a. preferences
         par.alpha = 1/3 # weight on good 1 consumer A
         par.beta = 2/3 # weight on good 1 consumer B
+        par.A = 1.0 # scale parameter consumer A (not in baseline)
 
         # b. endowments
         par.w1A = 0.8 # endowment of good 1 consumer A
@@ -40,12 +41,12 @@ class ExchangeEconomyModelClass:
         """        
 
         par = self.par
-        return x1A**par.alpha*x2A**(1-par.alpha)
+        return par.A*x1A**par.alpha*x2A**(1-par.alpha)
     
     def x2A_indifference(self,uA,x1A):
 
         par = self.par
-        return (uA/x1A**par.alpha)**(1/(1-par.alpha))
+        return (uA/(par.A*x1A**par.alpha))**(1/(1-par.alpha))
 
     def utility_B(self,x1B,x2B):
         """
@@ -109,12 +110,12 @@ class ExchangeEconomyModelClass:
         ax_B.invert_yaxis()
 
         # c. limits
-        ax_A.plot([0,w1bar],[0,0],lw=2,color='black')
+        ax_A.plot([0,w1bar],[0,0],lw=2,color='black') # sides of box
         ax_A.plot([0,w1bar],[w2bar,w2bar],lw=2,color='black')
         ax_A.plot([0,0],[0,w2bar],lw=2,color='black')
         ax_A.plot([w1bar,w1bar],[0,w2bar],lw=2,color='black')
 
-        ax_A.set_xlim([-0.1, w1bar + 0.1])
+        ax_A.set_xlim([-0.1, w1bar + 0.1]) # figure bigger than box
         ax_A.set_ylim([-0.1, w2bar + 0.1])    
         ax_B.set_xlim([w1bar + 0.1, -0.1])
         ax_B.set_ylim([w2bar + 0.1, -0.1])
@@ -172,10 +173,14 @@ class ExchangeEconomyModelClass:
         x1B_vec = 1 - x1A_vec
         x2B_vec = self.x2B_indifference(uB,x1B_vec)
         
-        I = x2A_vec < 1-x2B_vec
-        I &= x2A_vec > 0
+        I = x2A_vec < 1-x2B_vec # in between indifference curves
+        I &= x2A_vec > 0 # in box
         I &= x2A_vec < 1.0
-        ax_A.fill_between(x1A_vec[I],x2A_vec[I],np.fmin(1-x2B_vec[I],1.0),color='gray',alpha=0.5)
+
+        x = x1A_vec[I]
+        y1 = x2A_vec[I]
+        y2 = np.fmin(1-x2B_vec[I],1.0)
+        ax_A.fill_between(x,y1,y2,color='gray',alpha=0.5)
 
     def plot_budget_line(self,ax_A):
         """
@@ -235,14 +240,14 @@ class ExchangeEconomyModelClass:
         p1 = p_guess
         
         # b. iteratre
-        t = 0
+        k = 0
         while True:
 
             # i. excess demand
             eps = self.check_market_clearing(p1)
 
             # ii. stop?
-            if t >= par.maxiter: raise ValueError('Max iterations exceeded')
+            if k >= par.maxiter: raise ValueError('Max iterations exceeded')
 
             if np.abs(eps[0]) < par.tol:
                 
@@ -254,7 +259,7 @@ class ExchangeEconomyModelClass:
                 if print_output:
 
                     print('\nSolved!')
-                    print(f' {t:3d}: p1 = {p1:12.8f}, x1A = {sol.xA[0]:12.8f}, x2A = {sol.xA[1]:12.8f}')
+                    print(f' {k:3d}: p1 = {p1:12.8f}, x1A = {sol.xA[0]:12.8f}, x2A = {sol.xA[1]:12.8f}')
                     print(f' Excess demand of good 1: {eps[0]:14.8f}')
                     print(f' Excess demand of good 2: {eps[1]:14.8f}')
 
@@ -263,18 +268,18 @@ class ExchangeEconomyModelClass:
             # iii. print
             if print_output:
 
-                if t < 5 or t %5 == 0:
-                    print(f'{t:3d}: p1 = {p1:12.8f} -> excess demand of good 1 -> {eps[0]:14.8f}',end='')
+                if k < 5 or k%5 == 0:
+                    print(f'{k:3d}: p1 = {p1:12.8f} -> excess demand of good 1 -> {eps[0]:14.8f}',end='')
                     print(f', x1A = {self.demand_A(p1)[0]:12.8f}, x2A = {self.demand_A(p1)[1]:12.8f}',end='')
                     print(f', x1B = {self.demand_B(p1)[0]:12.8f}, x2B = {self.demand_B(p1)[1]:12.8f}')
-                elif t == 5:
+                elif k == 5:
                     print('   ...')
 
             # iv. p1
             p1 = p1 + par.nu*eps[0]
 
             # v. increment
-            t += 1
+            k += 1
 
     ###########################
     # other solution concepts #
