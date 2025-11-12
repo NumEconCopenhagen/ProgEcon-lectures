@@ -161,7 +161,7 @@ class ProductionEconomyClass():
         # b. find bounds
         left = np.max(par.grid_w[par.grid_mkt_clearing < 0])
         right = np.min(par.grid_w[par.grid_mkt_clearing > 0])
-        print(f'equilibrium price must be in [{left:.2f},{right:.2f}]\n')            
+        print(f'equilibrium wage must be in [{left:.2f},{right:.2f}]\n')            
 
         # c. bisection search
         def obj(w):
