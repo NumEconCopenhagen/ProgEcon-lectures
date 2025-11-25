@@ -67,3 +67,44 @@ def simulate_with_rule_grid(a1, a2, v, s, p, pad=0.6, n=400):
 # lam is the weight on output gap deviations
 def loss_quad(y, pi, p, lam=0.5):
     return float(np.sum((pi-p["pi_star"])**2 + lam*(y-p["ybar"])**2))
+
+
+
+import numpy as np
+
+def compute_r2(x_data, x_fit):
+    """
+    Compute R^2 from an OLS regression of x_data on x_fit with an intercept.
+
+    Parameters
+    ----------
+    x_data : array_like
+        Actual data series (dependent variable).
+    x_fit : array_like
+        Fitted values or model series (regressor).
+
+    Returns
+    -------
+    R2 : float
+        Coefficient of determination from regressing x_data on x_fit.
+    a_hat : float
+        Estimated intercept.
+    b_hat : float
+        Estimated slope.
+    """
+    x_data = np.asarray(x_data, dtype=float).ravel()
+    x_fit  = np.asarray(x_fit,  dtype=float).ravel()
+
+    # Design matrix with intercept
+    X = np.vstack([np.ones_like(x_fit), x_fit]).T
+
+    beta_hat, _, _, _ = np.linalg.lstsq(X, x_data, rcond=None)
+    a_hat, b_hat = beta_hat
+
+    x_pred = a_hat + b_hat * x_fit
+
+    ss_res = np.sum((x_data - x_pred)**2)
+    ss_tot = np.sum((x_data - np.mean(x_data))**2)
+    R2 = 1.0 * (1.0 - ss_res / ss_tot)
+
+    return R2, a_hat, b_hat
