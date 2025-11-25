@@ -1,0 +1,1126 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{appendixnumberbeamer}
+
+\usetheme[progressbar=frametitle,block=fill]{metropolis}
+
+% margin
+\setbeamersize{text margin right=1.5cm}
+
+% colors
+\colorlet{DarkRed}{red!70!black}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{alerted text}{fg=DarkRed}
+\setbeamercolor{progress bar}{fg=DarkRed}
+\setbeamercolor{button}{bg=DarkRed}
+
+% width of seperators
+\makeatletter
+\setlength{\metropolis@titleseparator@linewidth}{1pt}
+\setlength{\metropolis@progressonsectionpage@linewidth}{1pt}
+\setlength{\metropolis@progressinheadfoot@linewidth}{1pt}
+\makeatother
+
+% new alert block
+\newlength\origleftmargini
+\setlength\origleftmargini\leftmargini
+\setbeamertemplate{itemize/enumerate body begin}{\setlength{\leftmargini}{4mm}}
+\let\oldalertblock\alertblock
+\let\oldendalertblock\endalertblock
+\def\alertblock{\begingroup \setbeamertemplate{itemize/enumerate body begin}{\setlength{\leftmargini}{\origleftmargini}} \oldalertblock}
+\def\endalertblock{\oldendalertblock \endgroup}
+\setbeamertemplate{mini frame}{}
+\setbeamertemplate{mini frame in current section}{}
+\setbeamertemplate{mini frame in current subsection}{}
+\setbeamercolor{section in head/foot}{fg=normal text.bg, bg=structure.fg}
+\setbeamercolor{subsection in head/foot}{fg=normal text.bg, bg=structure.fg}
+
+% footer
+\makeatletter
+\setbeamertemplate{footline}{%
+    \begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}{section in head/foot}
+      \vskip1pt\insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll \insertframenumber{} / \inserttotalframenumber \hskip2pt}\vskip3pt% 
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+    \end{beamercolorbox}
+}
+\makeatother
+
+% toc
+\setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsectionnumber.~\inserttocsection\par}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection\par}
+
+% links
+\usepackage{hyperref}
+\hypersetup{%
+  colorlinks=true,
+  linkcolor=,
+  urlcolor=DarkRed
+}
+% Added by lyx2lyx
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\end_preamble
+\options t,10pt
+\use_default_options false
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "lmodern" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style danish
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+title{Outroduction 
+\backslash
+vspace{-2mm}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+subtitle{Programming for Economists 
+\backslash
+vspace{-4mm}} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+author{Jeppe Druedahl
+\backslash
+
+\backslash
+Brigitte Hochmuth}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+date{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeamertemplate{footline}{} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+maketitle
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addtocounter{framenumber}{-1}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}<beamer>
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+frametitle{Plan}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tableofcontents[]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Learning goals
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Summarize and visualize empirical data
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\text{\ensuremath{\Rightarrow}}$
+\end_inset
+
+ gain flexibility and automation compared to Excel
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\text{\ensuremath{\Rightarrow}}$
+\end_inset
+
+ build upon Descriptive Economics
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\text{\ensuremath{\Rightarrow}}$
+\end_inset
+
+ working with 
+\begin_inset Quotes ald
+\end_inset
+
+big data
+\begin_inset Quotes ard
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Numerically solve and simulate economic models
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $\text{\ensuremath{\Rightarrow}}$
+\end_inset
+
+ less strict assumptions than with math and easy visualization
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\text{\ensuremath{\Rightarrow}}$
+\end_inset
+
+ improve your understanding of Micro and Macro
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\text{\ensuremath{\Rightarrow}}$
+\end_inset
+
+ from model-user to 
+\emph on
+model-builder
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Course overview
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-2mm}
+\backslash
+footnotesize
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Week 37-38:
+ Basics 
+\series default
+(types,
+ containers,
+ views vs.
+ copies,
+ conditionals,
+ loops,
+ functions,
+ floating point numbers,
+ classes,
+ numpy)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Week 39-41:
+ Data 
+\series default
+(print,
+ plot,
+ save/load,
+ online data,
+ descriptive economics,
+ structure and documentation,
+ workflow and debugging,
+ git)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Week 43-44:
+ Tools 
+\series default
+(optimization,
+ root-finding,
+ random numbers,
+ simulation)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Week 45-48:
+
+\series default
+ 
+\series bold
+Models
+\series default
+ (Solow,
+ Walras,
+ AS-AD,
+ calibration/estimation)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Week 49-50:
+
+\series default
+ 
+\series bold
+Perspectives 
+\series default
+(dynamic optimization,
+ speed and parallization,
+ artificial intelligence)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Learning phases
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Basics:
+
+\series default
+ A million new concepts and syntax.
+\begin_inset Newline newline
+\end_inset
+
+How does it all fit together!?!?!
+ I will never understand this.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Data:
+ 
+\series default
+Arghhh!
+
+\series bold
+ 
+\series default
+It is also hard to use in practice.
+\begin_inset Newline newline
+\end_inset
+
+But I begin to be able to do some cool stuff.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Models:
+
+\series default
+ Hard to understand math and code simultaneously.
+\begin_inset Newline newline
+\end_inset
+
+But the combination is really powerful.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Perspectives:
+ 
+\series default
+I have learned a lot!
+ And so many possibilities ahead for working with data and models.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Knowledge
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Describe the differences between fundamental data types
+\begin_inset Newline newline
+\end_inset
+
+(e.g.
+ strings,
+ booleans,
+ integers and floats)
+\end_layout
+
+\begin_layout Enumerate
+Describe the differences between data containers
+\begin_inset Newline newline
+\end_inset
+
+(e.g.
+ lists,
+ dicts and arrays)
+\end_layout
+
+\begin_layout Enumerate
+Explain the use of conditionals (if-elseif-else)
+\end_layout
+
+\begin_layout Enumerate
+Explain the use of loops (for,
+ while,
+ continue,
+ break)
+\end_layout
+
+\begin_layout Enumerate
+Explain the use of functions,
+ methods and classes
+\end_layout
+
+\begin_layout Enumerate
+Describe the difference between views and copies of objects
+\end_layout
+
+\begin_layout Enumerate
+Explain how to use numerical optimizers and root-finders
+\end_layout
+
+\begin_layout Enumerate
+Explain how to use (pseudo) random numbers
+\end_layout
+
+\begin_layout Enumerate
+Explain how to use linear interpolation
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Skills
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Setup a Python environment
+\end_layout
+
+\begin_layout Enumerate
+Write Python scripts,
+ functions and notebooks
+\end_layout
+
+\begin_layout Enumerate
+Structure and document code
+\end_layout
+
+\begin_layout Enumerate
+Test and debug code
+\end_layout
+
+\begin_layout Enumerate
+Use version control system (Git)
+\end_layout
+
+\begin_layout Enumerate
+Import and export data and use online databases (APIs)
+\end_layout
+
+\begin_layout Enumerate
+Summarize and visualize data
+\end_layout
+
+\begin_layout Enumerate
+Use numerical optimizers and equation solvers
+\end_layout
+
+\begin_layout Enumerate
+Solve economic models numerically
+\end_layout
+
+\begin_layout Enumerate
+Simulate economic models
+\end_layout
+
+\begin_layout Enumerate
+Calibration economic models to data
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Competencies
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Write well-structured and well-documented code
+\end_layout
+
+\begin_layout Enumerate
+Work collaboratively on code projects
+\end_layout
+
+\begin_layout Enumerate
+Present and discuss results of a numerical analysis of empirical data and economic models
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Exam
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Exam
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Portfolio exam 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Part 1 
+\series default
+(40%):
+ Project 1+2 revised based on received feedback
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Part 2
+\series default
+ (60%):
+ 48 hour home assignment
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Grading:
+
+\series default
+ Pass/fail
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Dates:
+ 
+\series default
+17th-19th of January 2026
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Copilot and LLMs:
+
+\series default
+ Allowed,
+ even encouraged
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Home assignment
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Structure:
+
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+3 problems with 3-6 sub-questions.
+ 
+\end_layout
+
+\begin_layout Itemize
+Working with data or on solving and simulating economic models.
+\end_layout
+
+\begin_layout Itemize
+Easier than problem sets and project assignments
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Curriculum:
+ 
+\series default
+Lecture notebooks
+\series bold
+ 
+\series default
+(except 13+14 in Perspectives)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Packages:
+ 
+\series default
+\emph on
+No new packages are required,
+ and using non-standard packages are actively discouraged
+\end_layout
+
+\begin_layout Itemize
+Exam from 
+\series bold
+Introduction to Programming
+\series default
+ (2019-2024) [
+\begin_inset CommandInset href
+LatexCommand href
+name "link"
+target "https://github.com/NumEconCopenhagen/IntroProg-lectures/tree/main/exams"
+literal "false"
+
+\end_inset
+
+]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Curriculum was broader
+\end_layout
+
+\begin_layout Enumerate
+Exam problems were harder
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Answering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\series bold
+Focus on answering the questions
+\series default
+ - nothing more,
+ nothing less 
+\end_layout
+
+\begin_layout Enumerate
+Explain your 
+\series bold
+method in words 
+\series default
+(or with a step-by-step algorithm) 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Structure and comment your code!
+
+\series default
+ 
+\end_layout
+
+\begin_layout Enumerate
+Explain your 
+\series bold
+results in words
+\series default
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Partial answers,
+ attempts and considerations
+\series default
+ are also 
+\series bold
+awarded 
+\series default
+(something on everything is better than a lot on a few questions)
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{2mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+If you think there is an error in your code,
+ but you can't/don't have time to fix it,
+ addressing this in words is a 
+\series bold
+huge
+\series default
+ plus.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\series bold
+Disclaimer:
+ 
+\series default
+Solving the full exam project in depth might be hard.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+Hand-in
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+You should hand-in a single zip-file named with your groupname only.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Itemize
+The zip-file should contain:
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A general README.md for your portfolio 
+\end_layout
+
+\begin_layout Enumerate
+Your data analysis project (in the folder 01_dataproject) 
+\end_layout
+
+\begin_layout Enumerate
+Your model analysis project (in the folder 02_modelproject) 
+\end_layout
+
+\begin_layout Enumerate
+Your exam project (in the folder 03_examproject) 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+If you've uploaded everything to GitHub,
+ you can download a zip of your repository from there (press the green 'code'-button) 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Repetition
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Repetition
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\emph on
+Based on your survey answers
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
