@@ -800,7 +800,12 @@ Part 2
 Grading:
 
 \series default
- Pass/fail
+ Pass/Fail.
+ 
+\emph on
+The fail grade is given when the assignments jointly show that many learning goals has not been adequately understood
+\emph default
+.
 \end_layout
 
 \end_deeper
@@ -820,9 +825,50 @@ Copilot and LLMs:
 
 \series default
  Allowed,
- even encouraged
+ even encouraged 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ state how you have used in the 
+\begin_inset Quotes ald
+\end_inset
+
+GAI declaration
+\begin_inset Quotes ard
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{2mm}
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Example:
+ 
+\begin_inset Quotes ald
+\end_inset
+
+I have used the GitHub Copilot in VSCode.
+ I have both used it to generate suggestions for new code and correct and improve code I have written.
+\begin_inset Quotes ard
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -1036,7 +1082,7 @@ Solving the full exam project in depth might be hard.
 status collapsed
 
 \begin_layout Plain Layout
-Hand-in
+Hand-in in Digital Exam
 \end_layout
 
 \end_inset
