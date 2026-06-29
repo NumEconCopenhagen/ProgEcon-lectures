@@ -1,0 +1,1034 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+
+
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, topsep=2pt, itemsep=1pt}
+
+\title{Grading Guide\\Programming for Economists, Winter Exam 2025/26}
+\author{}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children no
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+Grading Guid
+\series default
+e
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Programming for Economists
+\begin_inset Newline newline
+\end_inset
+
+Winter ReExam 2025/26
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Data Analysis Project
+\end_layout
+
+\begin_layout Subsection*
+Problem 1:
+ Aggregate Inflation in Denmark
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.1
+\end_layout
+
+\begin_layout Itemize
+Retrieves PRIS113 data via an API call.
+\end_layout
+
+\begin_layout Itemize
+Constructs the CPI index (2020 = 100).
+\end_layout
+
+\begin_layout Itemize
+Computes month-to-month and 12-month inflation rates.
+\end_layout
+
+\begin_layout Itemize
+Produces clear time series plots with labeled axes and legend.
+\end_layout
+
+\begin_layout Itemize
+Provides a short interpretation of when the inflation surge ended.
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.2
+\end_layout
+
+\begin_layout Itemize
+Correctly defines and computes the weights 
+\begin_inset Formula $\kappa(k,\alpha)$
+\end_inset
+
+ for 
+\begin_inset Formula $\alpha=0,1,2,3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Computes instantaneous inflation using a rolling window or equivalent method.
+\end_layout
+
+\begin_layout Itemize
+Produces clean comparative plots for each 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Discusses how the timing of the inflation surge differs from Question 1.1.
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.3
+\end_layout
+
+\begin_layout Itemize
+Retrieves PRIS111 data for total CPI,
+ CPI excl.
+\begin_inset space \space{}
+\end_inset
+
+energy,
+ and core inflation.
+\end_layout
+
+\begin_layout Itemize
+Correctly computes 12-month inflation rates.
+\end_layout
+
+\begin_layout Itemize
+Plots the three series clearly since 2019.
+\end_layout
+
+\begin_layout Itemize
+Briefly discusses likely drivers of the post-pandemic inflation surge.
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.4
+\end_layout
+
+\begin_layout Itemize
+Retrieves all 4-digit PRIS111 product categories.
+\end_layout
+
+\begin_layout Itemize
+Computes 12-month inflation for each category with 
+\family typewriter
+groupby
+\family default
+ methods.
+\end_layout
+
+\begin_layout Itemize
+Produces percentile plots (25th,
+ 50th,
+ 75th).
+\end_layout
+
+\begin_layout Itemize
+Produces a histogram of price changes from Aug.
+\begin_inset space \space{}
+\end_inset
+
+2020 to Aug.
+\begin_inset space \space{}
+\end_inset
+
+2025.
+\end_layout
+
+\begin_layout Itemize
+Identifies and illustrates the top-10 and bottom-10 categories.
+\end_layout
+
+\begin_layout Itemize
+Gives a short descriptive interpretation of the distributional patterns.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Problem 2:
+ International Comparison
+\end_layout
+
+\begin_layout Subsubsection*
+Question 2.1
+\end_layout
+
+\begin_layout Itemize
+Retrieves CPI from Denmark Statistics and HICP from FRED.
+\end_layout
+
+\begin_layout Itemize
+Plots the two indexes on a comparable scale.
+\end_layout
+
+\begin_layout Itemize
+Comments on similarities,
+ differences,
+ and whether the indices are comparable.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 2.2
+\end_layout
+
+\begin_layout Itemize
+Retrieves HICP data for Denmark,
+ Austria,
+ Euro Area,
+ and the U.S.
+\end_layout
+
+\begin_layout Itemize
+Plots index levels and 12-month inflation rates since 2019.
+\end_layout
+
+\begin_layout Itemize
+Computes min,
+ max,
+ and mean inflation rates year-by-year.
+\end_layout
+
+\begin_layout Itemize
+Summarises cross-country differences in inflation paths clearly.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Problem 3:
+ Extension
+\end_layout
+
+\begin_layout Itemize
+Extends the analysis with at least one new dataset,
+ 
+\end_layout
+
+\begin_layout Itemize
+Produces 1–3 new figures with clear economic relevance,
+ 
+\end_layout
+
+\begin_layout Itemize
+Explains the insight yielded by the extension.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Model Analysis Project
+\end_layout
+
+\begin_layout Subsection*
+Problem 1:
+ Labor Supply
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.1
+\end_layout
+
+\begin_layout Itemize
+Evaluates and plots the utility function over a grid for 
+\begin_inset Formula $\ell_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Evaluates and plots the FOC 
+\begin_inset Formula $\varphi(p_{i},c_{i},\ell_{i})$
+\end_inset
+
+ over the same grid.
+\end_layout
+
+\begin_layout Itemize
+Finds optimal labor supply using a numerical optimizer.
+\end_layout
+
+\begin_layout Itemize
+Finds optimal labor supply using a root finder.
+\end_layout
+
+\begin_layout Itemize
+Compares the two methods and comments on speed and robustness.
+\end_layout
+
+\begin_layout Itemize
+Compiles results into one clear figure (with subplots allowed).
+ 
+\end_layout
+
+\begin_layout Itemize
+Repeats the exercise for the additional 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ values with minimal new code.
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.2
+\end_layout
+
+\begin_layout Itemize
+Computes the optimal labor supply function 
+\begin_inset Formula $\ell^{\star}(p_{i})$
+\end_inset
+
+ for 
+\begin_inset Formula $p_{i}\in[0.5,3.0]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Correctly handles the minimum feasible hours condition.
+\end_layout
+
+\begin_layout Itemize
+Produces clear plots for both 
+\begin_inset Formula $\zeta=0.1$
+\end_inset
+
+ and 
+\begin_inset Formula $\zeta=-0.1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Briefly comments on how the lump-sum component affects labor supply.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Problem 2:
+ Public Good
+\end_layout
+
+\begin_layout Subsubsection*
+Question 2.1
+\end_layout
+
+\begin_layout Itemize
+Draws a productivity distribution and computes labor supply for all workers.
+\end_layout
+
+\begin_layout Itemize
+Computes tax revenue 
+\begin_inset Formula $T(\tau,\zeta)$
+\end_inset
+
+ and the Social Welfare Function.
+\end_layout
+
+\begin_layout Itemize
+Repeats this across the required range of 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ values and 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Plots revenue and SWF clearly.
+\end_layout
+
+\begin_layout Itemize
+Indicates the approximate maximizing point(s).
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 2.2
+\end_layout
+
+\begin_layout Itemize
+Runs a numerical optimizer to find 
+\begin_inset Formula $(\tau^{\star},\zeta^{\star})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Checks robustness to starting values.
+\end_layout
+
+\begin_layout Itemize
+Produces local plots of 
+\begin_inset Formula $T(\tau,\zeta)$
+\end_inset
+
+ and SWF around the optimum.
+\end_layout
+
+\begin_layout Itemize
+Computes and plots the Lorenz curve of consumption at the optimum.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Problem 3:
+ Top Tax
+\end_layout
+
+\begin_layout Itemize
+Evaluates and plots the utility function under the top-tax system.
+\end_layout
+
+\begin_layout Itemize
+Computes and plots the FOC for the pre-kink and post-kink regions.
+\end_layout
+
+\begin_layout Itemize
+Finds optimal labor supply via numerical optimization.
+\end_layout
+
+\begin_layout Itemize
+Computes optimal labor supply via the four-step FOC approach.
+\end_layout
+
+\begin_layout Itemize
+Compares the two methods and comments on speed and differences.
+\end_layout
+
+\begin_layout Itemize
+Repeats the analysis for the additional productivity values with minimal new code.
+\end_layout
+
+\begin_layout Itemize
+Presents results clearly,
+ optionally in a multi-panel figure.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 3.2
+\end_layout
+
+\begin_layout Itemize
+Computes 
+\begin_inset Formula $\ell^{\star}(p_{i})$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ for 
+\begin_inset Formula $p_{i}\in[0.5,3.0]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Classifies workers into 
+\begin_inset Formula $\ell_{b}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\ell_{k}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $\ell_{a}$
+\end_inset
+
+ cases.
+\end_layout
+
+\begin_layout Itemize
+Reports the proportions in each region.
+\end_layout
+
+\begin_layout Itemize
+Plots both labor supply and consumption clearly.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 3.3
+\end_layout
+
+\begin_layout Itemize
+Computes the SWF under the introduced top tax.
+\end_layout
+
+\begin_layout Itemize
+Computes and plots the Lorenz curve of consumption.
+\end_layout
+
+\begin_layout Itemize
+Explores alternative 
+\begin_inset Formula $(\omega,\kappa)$
+\end_inset
+
+ values and reports if SWF improves.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Problem 4:
+ Extension
+\end_layout
+
+\begin_layout Itemize
+Implements a meaningful model extension (preferences,
+ heterogeneity,
+ tax rules,
+ etc.).
+\end_layout
+
+\begin_layout Itemize
+Evaluates the extended model correctly.
+\end_layout
+
+\begin_layout Itemize
+Explains the resulting economic insight clearly
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Exam Project
+\end_layout
+
+\begin_layout Subsection*
+Problem 1:
+ Danish Consumption
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.1 (Consumption share of disposable income)
+\end_layout
+
+\begin_layout Itemize
+Retrieves quarterly data from StatBank Denmark table 
+\family typewriter
+NKSO2
+\family default
+ via an API call (transactions 
+\family typewriter
+B6GD
+\family default
+ and 
+\family typewriter
+P3D
+\family default
+,
+ sector 
+\family typewriter
+S1M
+\family default
+).
+ 
+\end_layout
+
+\begin_layout Itemize
+Constructs the ratio:
+ consumption / disposable income.
+ 
+\end_layout
+
+\begin_layout Itemize
+Performs seasonal adjustment using 
+\family typewriter
+statsmodels.tsa.seasonal.STL
+\family default
+ (quarterly period=4) for both series.
+ 
+\end_layout
+
+\begin_layout Itemize
+Produces a clear plot of the raw ratio and the seasonally adjusted ratio (labeled axes,
+ legend,
+ readable formatting).
+ 
+\end_layout
+
+\begin_layout Itemize
+Adds horizontal mean lines for the requested subsamples (pre-2008Q1,
+ 2010Q1–2019Q4,
+ 2021Q1–latest) and clearly indicates which mean corresponds to which subsample.
+ 
+\end_layout
+
+\begin_layout Itemize
+Provides a short,
+ correct interpretation of the level changes over the three subsamples.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.2 (Consumption shares by category)
+\end_layout
+
+\begin_layout Itemize
+Retrieves consumption-by-purpose data from table 
+\family typewriter
+NKHC021
+\family default
+ (current prices and seasonally adjusted).
+ 
+\end_layout
+
+\begin_layout Itemize
+Clean data properly.
+ 
+\end_layout
+
+\begin_layout Itemize
+Produces a line plot of total consumption from 
+\family typewriter
+NKHC021
+\family default
+ and compares it to the consumption series used in Question 1.1 (levels).
+\end_layout
+
+\begin_layout Itemize
+Computes consumption shares for each category (category / total) correctly.
+ 
+\end_layout
+
+\begin_layout Itemize
+Plots consumption shares over time with a clear legend (may split into multiple figures/panels for readability).
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.3 (Long-run and post-2019 changes in shares)
+\end_layout
+
+\begin_layout Itemize
+Computes average consumption shares for 1990 and 2025 (the available quarters)
+\end_layout
+
+\begin_layout Itemize
+Computes the change in each category share between the two years.
+ 
+\end_layout
+
+\begin_layout Itemize
+Produces a clear bar chart of these changes (sorted bars and labeled categories are rewarded).
+ 
+\end_layout
+
+\begin_layout Itemize
+Repeats the change calculation for the post-2019 comparison
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Problem 2:
+ Labor supply with non-linear pay schedule
+\end_layout
+
+\begin_layout Subsubsection*
+Question 2.1 (Baseline wage schedule)
+\end_layout
+
+\begin_layout Itemize
+Correctly implements the baseline budget and utility components (earnings,
+ consumption,
+ utility) and respects the feasible set 
+\begin_inset Formula $\ell\in[0,\ell_{\max}]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Evaluates and plots 
+\begin_inset Formula $c(\ell)$
+\end_inset
+
+ and 
+\begin_inset Formula $u(\ell)$
+\end_inset
+
+ over a grid,
+ with a clearly marked optimum 
+\begin_inset Formula $\ell^{\star}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Solves for 
+\begin_inset Formula $\ell^{\star}$
+\end_inset
+
+ using three distinct numerical methods:
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+grid search,
+ 
+\end_layout
+
+\begin_layout Itemize
+a local optimizer,
+ 
+\end_layout
+
+\begin_layout Itemize
+a root finder applied to the first-order condition.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The three methods deliver consistent results (up to numerical tolerances),
+ and the solution is interior when expected.
+ 
+\end_layout
+
+\begin_layout Itemize
+Briefly comments on method differences (accuracy,
+ speed,
+ robustness).
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 2.2 (Overtime schedule and multiple local maxima)
+\end_layout
+
+\begin_layout Itemize
+Correctly implements the overtime earnings schedule (kink at 
+\begin_inset Formula $\bar{\ell}$
+\end_inset
+
+ and higher marginal wage above it).
+ 
+\end_layout
+
+\begin_layout Itemize
+Plots 
+\begin_inset Formula $c(\ell)$
+\end_inset
+
+ and 
+\begin_inset Formula $u(\ell)$
+\end_inset
+
+ under overtime and demonstrates (visually or numerically) the presence of multiple local maxima.
+ 
+\end_layout
+
+\begin_layout Itemize
+Runs the local optimizer from two distinct starting values (
+\begin_inset Formula $\ell_{0}=0.2$
+\end_inset
+
+ and 
+\begin_inset Formula $\ell_{0}=1.2$
+\end_inset
+
+) and explains why the solutions can differ.
+ 
+\end_layout
+
+\begin_layout Itemize
+Implements a robust solver that returns the global maximizer (e.g.
+ optimize within each region + check kink points) and documents the approach.
+ 
+\end_layout
+
+\begin_layout Itemize
+Presents the final choice 
+\begin_inset Formula $\ell^{\star}$
+\end_inset
+
+ clearly and includes a short interpretation.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Problem 3:
+ Labor market simulation
+\end_layout
+
+\begin_layout Subsubsection*
+Question 3.1 (Document stationarity)
+\end_layout
+
+\begin_layout Itemize
+Correctly implements the job-finding probability 
+\begin_inset Formula $f_{s}(d)$
+\end_inset
+
+ with duration dependence and the lower bound of 0.05.
+ 
+\end_layout
+
+\begin_layout Itemize
+Correctly updates employment,
+ unemployment duration (reset to 0 when employed,
+ set to 1 upon separation,
+ increment while unemployed),
+ and human capital dynamics as specified.
+ 
+\end_layout
+
+\begin_layout Itemize
+Simulates for 
+\begin_inset Formula $T=3000$
+\end_inset
+
+ with 
+\begin_inset Formula $N=50,000$
+\end_inset
+
+ and fixed random seed 123.
+ 
+\end_layout
+
+\begin_layout Itemize
+Stores only the last 200 periods of the cross section (small panel),
+ and uses it for all stationarity checks.
+ 
+\end_layout
+
+\begin_layout Itemize
+Computes and reports unemployment rate and the mean and SD of 
+\begin_inset Formula $\log y$
+\end_inset
+
+ separately for the first half (-200:-101) and second half (-100:-1) of the stored panel;
+ the two halves are shown to be (almost) identical.
+ 
+\end_layout
+
+\begin_layout Itemize
+Compares distributions of 
+\begin_inset Formula $\log y$
+\end_inset
+
+ and unemployment durations among the unemployed across the two halves (e.g.
+ histograms) and argues stationarity.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 3.2 (Compare low- vs high-skilled)
+\end_layout
+
+\begin_layout Itemize
+Produces type-specific summary statistics using the stored panel (pooled over time where appropriate):
+ unemployment rate,
+ mean and SD of 
+\begin_inset Formula $\log y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Computes and reports informative duration statistics by type (e.g.
+ mean duration among unemployed;
+ share unemployed for more than 12 months).
+ 
+\end_layout
+
+\begin_layout Itemize
+Presents results in a clear table and provides a short comparison/interpretation.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 3.3 (Reasons for inequality / counterfactuals)
+\end_layout
+
+\begin_layout Itemize
+Designs counterfactual simulations that change one type-specific parameter at a time (
+\begin_inset Formula $\mu_{s},a_{s},f_{0,s},\lambda_{s}$
+\end_inset
+
+) while keeping the others fixed.
+ 
+\end_layout
+
+\begin_layout Itemize
+Re-simulates the model consistently and recomputes the outcome gaps (e.g.
+ 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ unemployment,
+ 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ mean 
+\begin_inset Formula $\log y$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\Delta$
+\end_inset
+
+ mean duration) for each counterfactual.
+ 
+\end_layout
+
+\begin_layout Itemize
+Summarises results in a compact table and clearly identifies which parameters drive the differences.
+\end_layout
+
+\end_body
+\end_document

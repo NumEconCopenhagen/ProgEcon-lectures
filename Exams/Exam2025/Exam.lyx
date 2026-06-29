@@ -1,0 +1,1427 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\date{}
+
+% code
+\usepackage{xcolor}
+\usepackage{listings}
+
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{background}{HTML}{F5F5F5}
+\definecolor{keyword}{HTML}{4B69C6}
+\definecolor{string}{HTML}{448C27}
+\definecolor{comment}{HTML}{448C27}
+
+\usepackage{inconsolata}
+
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{comment},
+    keywordstyle=\color{keyword},
+    stringstyle=\color{string},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                                    
+    numbersep=10pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4,
+	showlines=true
+}
+
+\lstset{style=mystyle}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format pdf5
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\float_alignment class
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2.5cm
+\rightmargin 3cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\author 1020469 "gmf123"
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset External
+	template PDFPages
+	filename front_page.pdf
+	display false
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newgeometry{left=3cm,right=3cm,top=2.5cm,bottom=2.5cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Danish House Prices
+\end_layout
+
+\begin_layout Subsection
+Question 1
+\end_layout
+
+\begin_layout Standard
+Use an API call to download data on house prices from table 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{EJ56}
+\end_layout
+
+\end_inset
+
+ at Denmark Statistics.
+ Drop all provinces [
+\begin_inset Quotes eld
+\end_inset
+
+landsdele
+\begin_inset Quotes erd
+\end_inset
+
+ in Danish] with any missing observations.
+ Plot the evolution of house prices across Danish provinces indexed to 
+\begin_inset Formula $100$
+\end_inset
+
+ in the first quarter of 1992.
+ Rank the provinces in terms of total house price growth in the sample period.
+\end_layout
+
+\begin_layout Subsection
+Question 2
+\end_layout
+
+\begin_layout Standard
+Download data on the Consumer Price Index (CPI) from table 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{PRIS113}
+\end_layout
+
+\end_inset
+
+ at Denmark Statistics.
+ Plot the evolution of 
+\emph on
+real
+\emph default
+ house prices across Danish provinces.
+\end_layout
+
+\begin_layout Subsection
+Question 3
+\end_layout
+
+\begin_layout Standard
+Import data on house prices per 
+\begin_inset Formula $m^{2}$
+\end_inset
+
+ across municipalities from the provided Excel file 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{BM010_houses.xlsx}
+\end_layout
+
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+The data has been downloaded from Finans Danmark's 
+\begin_inset CommandInset href
+LatexCommand href
+name "Boligmarkedsstatistikken"
+target "https://finansdanmark.dk/tal-og-data/boligstatistik/boligmarkedsstatistikken/"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ Drop all municipalities with any missing observations.
+ Plot the total house price growth across municipalities against the initial level of the house price.
+ Is the correlation between the initial level and total growth positive?
+ Label the five municipalities with the highest total house price growth and the five municipalities with the five largest initial house price levels (some of which might be the same).
+\end_layout
+
+\begin_layout Subsection
+Question 4
+\end_layout
+
+\begin_layout Standard
+Compute a four-quarter backward-looking rolling average of house prices per 
+\begin_inset Formula $m^{2}$
+\end_inset
+
+ in each municipality.
+ Compute the change in this rolling average of house prices in each municipality from its peak (maximum value) before the 2008 Financial Crisis until the latest observation in the data set.
+ Which municipalities are still below the peak?
+ Illustrate your answer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Exchange economy
+\end_layout
+
+\begin_layout Standard
+We consider an 
+\emph on
+exchange economy
+\emph default
+ with two consumers,
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+,
+ and two goods,
+ 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+.
+ The total endowment of each good is always 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ Consumer 
+\begin_inset Formula $A$
+\end_inset
+
+'s endowment is 
+\begin_inset Formula $\boldsymbol{\omega}^{A}=(\omega_{1}^{A},\omega_{2}^{A})$
+\end_inset
+
+.
+ Consumer 
+\begin_inset Formula $B$
+\end_inset
+
+'s endowment is 
+\begin_inset Formula $\boldsymbol{\omega}^{B}=(\omega_{1}^{B},\omega_{2}^{B})=(1-\omega_{1}^{A},1-\omega_{2}^{A})$
+\end_inset
+
+.
+ Prices are 
+\begin_inset Formula $\boldsymbol{p}=(p_{1},p_{2})$
+\end_inset
+
+.
+ The numeraire is 
+\begin_inset Formula $p_{2}=1.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Both consumers have utility functions on the Constant Elasticity of Substitution (CES) form
+\begin_inset Formula 
+\begin{align}
+u(x_{1},x_{2};\alpha,\beta) & =\left(\alpha x_{1}^{\rho}+\beta x_{2}^{\rho}\right)^{1/\rho},\qquad\rho\neq0.\label{eq:u}
+\end{align}
+
+\end_inset
+
+The indifference curve for utility level 
+\begin_inset Formula $u$
+\end_inset
+
+ can be written
+\begin_inset Formula 
+\begin{equation}
+x_{2}(u;\alpha,\beta)=\left(\frac{u^{\rho}-\alpha x_{1}^{\rho}}{\beta}\right)^{\frac{1}{\rho}}.\label{eq:indifference}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Defining 
+\begin_inset Formula $\sigma=\frac{1}{1-\rho}$
+\end_inset
+
+ and 
+\begin_inset Formula $m=p_{1}\omega_{1}+\omega_{2}$
+\end_inset
+
+.
+ The demand functions are
+\begin_inset Formula 
+\begin{align}
+x_{1}(p_{1},m) & =\alpha^{\sigma}p_{1}^{-\sigma}\frac{m}{\alpha^{\sigma}p_{1}^{1-\sigma}+\beta^{\sigma}}\label{eq:demand1}\\
+x_{2}(p_{1},m) & =\beta^{\sigma}\frac{m}{\alpha^{\sigma}p_{1}^{1-\sigma}+\beta^{\sigma}}.\label{eq:demand2}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consumer 
+\begin_inset Formula $A$
+\end_inset
+
+ has preference parameters 
+\begin_inset Formula $\alpha^{A}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\beta^{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\rho^{A}$
+\end_inset
+
+,
+ and income 
+\begin_inset Formula 
+\[
+m^{A}=p_{1}\omega_{1}^{A}+\omega_{2}^{A}.
+\]
+
+\end_inset
+
+Consumer 
+\begin_inset Formula $B$
+\end_inset
+
+ has preference parameters 
+\begin_inset Formula $\alpha^{B}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\beta^{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $\rho^{B}$
+\end_inset
+
+,
+ and income 
+\begin_inset Formula 
+\[
+m^{B}=p_{1}\omega_{1}^{B}+\omega_{2}^{B}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In equilibrium excess demand is zero.
+ This implies that all equilibrium prices is a solution to 
+\begin_inset Formula 
+\begin{equation}
+\epsilon_{1}(p_{1})\equiv x_{1}^{A\star}(p_{1},m^{A})+x_{1}^{B\star}(p_{1},m^{B})-1=0.\label{eq:excess_demand1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Calibration.
+\end_layout
+
+\begin_layout Standard
+The preference parameters are 
+\begin_inset Formula $\alpha^{A}=\beta^{B}=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\beta^{A}=\alpha^{B}=\left(12/37\right)^{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $\rho^{A}=\rho^{B}=-2$
+\end_inset
+
+.
+ The endowments are 
+\begin_inset Formula $\omega_{1}^{A}=1.0-10^{-8}$
+\end_inset
+
+ and 
+\begin_inset Formula $\omega_{2}^{A}=10^{-8}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Code.
+\end_layout
+
+\begin_layout Standard
+You can use the code in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{ExchangeEconomyModel.py}
+\end_layout
+
+\end_inset
+
+ uploaded together with the exam as your starting point.
+\end_layout
+
+\begin_layout Subsection
+Question 1
+\end_layout
+
+\begin_layout Standard
+Create a figure with two plots of respectively
+\end_layout
+
+\begin_layout Enumerate
+demand for good 1,
+ 
+\begin_inset Formula $x_{1}^{A\star}(p_{1},m^{A})$
+\end_inset
+
+,
+ 
+\begin_inset Formula $x_{1}^{B\star}(p_{1},m^{B})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+excess demand for good 1,
+ 
+\begin_inset Formula $\epsilon_{1}(p_{1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $p_{1}\in$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{np.linspace(0.25,5,100)}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+When is 
+\begin_inset Formula $\epsilon_{1}(p_{1})\approx0$
+\end_inset
+
+?
+ How many equilibria are there?
+\end_layout
+
+\begin_layout Subsection
+Question 2
+\end_layout
+
+\begin_layout Standard
+Consider a tâtonnement algorithm for 
+\begin_inset Formula $\tau=10^{-8}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\nu=50$
+\end_inset
+
+ and 
+\begin_inset Formula $K=5000$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+Guess 
+\begin_inset Formula $p_{1}^{0}$
+\end_inset
+
+ and set 
+\begin_inset Formula $k=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Calculate 
+\begin_inset Formula $\epsilon_{1}^{k}=\epsilon_{1}(p_{1}^{k}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\left|\epsilon_{1}^{k}\right|<\tau$
+\end_inset
+
+ stop and return 
+\begin_inset Formula $p_{1}^{\ast}=p_{1}^{k}$
+\end_inset
+
+ as the solution
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $k>K$
+\end_inset
+
+ stop and return error
+\end_layout
+
+\begin_layout Enumerate
+Set 
+\begin_inset Formula $p_{1}^{k+1}=p_{1}^{k}+\nu\epsilon_{1}^{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Increment 
+\begin_inset Formula $k$
+\end_inset
+
+ and go to step 2
+\end_layout
+
+\begin_layout Standard
+Implement this algorithm and apply it for 
+\begin_inset Formula $p_{1}^{0}=0.9$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{1}^{0}=1.1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Plot the implied sequences for 
+\begin_inset Formula $p_{1}^{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon_{1}^{k}$
+\end_inset
+
+ for 
+\begin_inset Formula $k=0,1,2,\dots$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Does the choice of initial guess determine which equilibrium is found?
+\end_layout
+
+\begin_layout Subsection
+Question 3
+\end_layout
+
+\begin_layout Standard
+Apply the tâtonnement algorithm for 
+\begin_inset Formula $p_{1}^{0}\in$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{np.linspace(0.25,5,50)}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Plot 
+\begin_inset Formula $p_{1}^{0}$
+\end_inset
+
+ against the resulting 
+\begin_inset Formula $p_{1}^{\ast}$
+\end_inset
+
+.
+ Do you find all equilibria?
+\end_layout
+
+\begin_layout Subsection
+Question 4
+\end_layout
+
+\begin_layout Standard
+Consider a so-called dampened Newton-Rhapson algorithm for 
+\begin_inset Formula $\tau=10^{-8}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\varphi=0.1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\iota=0.99$
+\end_inset
+
+ and 
+\begin_inset Formula $K=5000$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+Guess 
+\begin_inset Formula $p_{1}^{0}$
+\end_inset
+
+ and set 
+\begin_inset Formula $k=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Calculate 
+\begin_inset Formula $\epsilon_{1}^{k}=\epsilon_{1}(p_{1}^{k}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $\left|\epsilon_{1}^{k}\right|<\tau$
+\end_inset
+
+ stop and return 
+\begin_inset Formula $p_{1}^{\ast}=p_{1}^{k}$
+\end_inset
+
+ as the solution
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $k>K$
+\end_inset
+
+ stop and return error
+\end_layout
+
+\begin_layout Enumerate
+Calculate 
+\begin_inset Formula $\Delta=\frac{\epsilon_{1}(p_{1}^{k}+h)-\epsilon_{1}^{k}}{h}$
+\end_inset
+
+ for 
+\begin_inset Formula $h=10^{-6}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Set 
+\begin_inset Formula $p_{1}^{k+1}=p_{1}^{k}-\varphi\frac{\epsilon_{1}^{k}}{\Delta}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $p_{1}^{k+1}<0$
+\end_inset
+
+ set 
+\begin_inset Formula $p_{1}^{k}=\iota p_{1}^{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Increment 
+\begin_inset Formula $k$
+\end_inset
+
+ and go to step 2
+\end_layout
+
+\begin_layout Standard
+Apply this algorithm for 
+\begin_inset Formula $p_{1}^{0}\in$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{np.linspace(0.25,5,50)}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Plot 
+\begin_inset Formula $p_{1}^{0}$
+\end_inset
+
+ against the resulting 
+\begin_inset Formula $p_{1}^{\ast}$
+\end_inset
+
+.
+ Do you find all equilibria?
+\end_layout
+
+\begin_layout Subsection
+Question 5
+\end_layout
+
+\begin_layout Standard
+Illustrate all the equilibria you have found,
+ preferably in an Edgeworth box (see the method 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{create_edgeworthbox}
+\end_layout
+
+\end_inset
+
+)
+\change_inserted 1020469 1768550598
+ 
+\change_unchanged
+with the indifference curves for each consumer.
+\end_layout
+
+\begin_layout Section
+The AS-AD Model 
+\end_layout
+
+\begin_layout Standard
+Consider an AS–AD model for a closed economy.
+ Output in period 
+\begin_inset Formula $t$
+\end_inset
+
+ is denoted 
+\begin_inset Formula $y_{t}$
+\end_inset
+
+ and the long-run level of output is 
+\begin_inset Formula $\bar{y}$
+\end_inset
+
+.
+ Inflation in period 
+\begin_inset Formula $t$
+\end_inset
+
+ is denoted 
+\begin_inset Formula $\pi_{t}$
+\end_inset
+
+ and the inflation target is 
+\begin_inset Formula $\pi^{\ast}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The central bank sets the nominal interest rate,
+ 
+\begin_inset Formula $i_{t}$
+\end_inset
+
+,
+ according to a Taylor-rule
+\begin_inset Formula 
+\begin{equation}
+i_{t}=\overline{r}+\pi_{t}^{e}+\alpha_{1}(\pi_{t}-\pi^{*})+\alpha_{2}(y_{t}-\bar{y}),\label{eq:taylor}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\overline{r}$
+\end_inset
+
+ is the long-run real interest rate,
+ 
+\begin_inset Formula $\pi_{t}^{e}$
+\end_inset
+
+ are inflation expectations,
+ 
+\begin_inset Formula $\alpha_{1}>0$
+\end_inset
+
+ measures the response to the inflation gap,
+ and 
+\begin_inset Formula $\alpha_{2}>0$
+\end_inset
+
+ measures the response to the output gap.
+\end_layout
+
+\begin_layout Standard
+Market clearing in the goods market requires
+\begin_inset Formula 
+\begin{equation}
+y_{t}-\bar{y}=-b(i_{t}-\pi_{t}^{e}-\overline{r})+v_{t},\label{eq:market_clearing}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $b>0$
+\end_inset
+
+ is the real-rate sensitivity,
+ and 
+\begin_inset Formula $v_{t}$
+\end_inset
+
+ is a 
+\emph on
+demand shock
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Together these two equation imply
+\series bold
+ 
+\series default
+the 
+\series bold
+Aggregate Demand (AD) curve
+\series default
+
+\begin_inset Formula 
+\begin{equation}
+\pi_{t}=\pi^{*}-\frac{1}{\alpha}\Big[(y_{t}-\bar{y})-z_{t}\Big],\label{eq:AD}
+\end{equation}
+
+\end_inset
+
+where
+\begin_inset Formula 
+\begin{align*}
+\alpha & \equiv\frac{b\alpha_{1}}{1+b\alpha_{2}}>0\\
+z_{t} & \equiv\frac{v_{t}}{1+b\alpha_{2}}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+Short-Run Aggregate Supply (SRAS) curve 
+\series default
+is
+\begin_inset Formula 
+\begin{equation}
+\pi_{t}=\pi_{t}^{e}+\gamma(y_{t}-\bar{y}),\label{eq:SRAS}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\gamma>0$
+\end_inset
+
+ is the slope.
+\end_layout
+
+\begin_layout Standard
+Inflation expectation are adaptive and given by
+\begin_inset Formula 
+\[
+\pi_{t}^{e}=\phi\pi_{t-1}^{e}+(1-\phi)\pi_{t-1},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\phi\in(0,1)$
+\end_inset
+
+ is the weight on the expectation in the previous period,
+ and 
+\begin_inset Formula $1-\phi$
+\end_inset
+
+ is weight on inflation in the previous period.
+\end_layout
+
+\begin_layout Standard
+In each period,
+ the model is in equilibrium with 
+\begin_inset Formula $AD=AS$
+\end_inset
+
+.
+ This implies
+\begin_inset Formula 
+\begin{align}
+y_{t}^{\star} & =\bar{y}+\frac{1}{\frac{1}{\alpha}+\gamma}\left[\pi^{*}-\pi_{t}^{e}+\frac{1}{\alpha}z_{t}\right]\label{eq:y_eq}\\
+\pi_{t}^{\star} & =\pi_{t}^{e}+\frac{\gamma}{\frac{1}{\alpha}+\gamma}\left[\pi^{*}-\pi_{t}^{e}+\frac{1}{\alpha}z_{t}\right].\label{eq:pi_eq}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Calibration.
+\end_layout
+
+\begin_layout Standard
+The parameters are 
+\begin_inset Formula $\overline{y}=1$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\pi^{\ast}=0.02$
+\end_inset
+
+,
+ 
+\begin_inset Formula $b=0.6$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\alpha_{1}=1.5$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\alpha_{2}=0.10$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\gamma=4$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi=0.6$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Code.
+\end_layout
+
+\begin_layout Standard
+You can use the code in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{ASADModel.py}
+\end_layout
+
+\end_inset
+
+ uploaded together with the exam as your starting point.
+\end_layout
+
+\begin_layout Subsection
+Question 1
+\end_layout
+
+\begin_layout Standard
+Create a figure containing:
+\end_layout
+
+\begin_layout Enumerate
+The AD-curve
+\end_layout
+
+\begin_layout Enumerate
+The SRAS-curve for 
+\begin_inset Formula $\pi_{t}^{e}=\pi^{\ast}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The long-run equilibrium of 
+\begin_inset Formula $\pi_{t}=\pi^{\ast}$
+\end_inset
+
+ and 
+\begin_inset Formula $y_{t}=\overline{y}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Illustrate how the SRAS-curve moves if 
+\begin_inset Formula $\pi_{t}^{e}$
+\end_inset
+
+ jumps from 
+\begin_inset Formula $\pi^{\ast}=0.02$
+\end_inset
+
+ to 
+\begin_inset Formula $0.08$
+\end_inset
+
+.
+ Confirm the intersection with the AD-curve is given by 
+\begin_inset Formula $y_{t}^{\star}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi_{t}^{\star}$
+\end_inset
+
+ calculated without a demand shock,
+ i.e.
+ 
+\begin_inset Formula $z_{t}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Question 2
+\end_layout
+
+\begin_layout Standard
+Consider the effect of a temporary demand shock.
+ Let 
+\begin_inset Formula $v_{0}=0.1$
+\end_inset
+
+ while for 
+\begin_inset Formula $t>0$
+\end_inset
+
+ we have 
+\begin_inset Formula $v_{t}=0$
+\end_inset
+
+.
+ Initially,
+ 
+\begin_inset Formula $\pi_{0}^{e}=\pi^{\ast}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Simulating forward for 
+\begin_inset Formula $t=0,1,\dots,$
+\end_inset
+
+ can now be done as:
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $t>0$
+\end_inset
+
+:
+ Compute 
+\begin_inset Formula $\pi_{t}^{e}=\phi\pi_{t-1}^{e}+(1-\phi)\pi_{t-1}^{\star}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $y_{t}^{\star}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi_{t}^{\star}$
+\end_inset
+
+ given 
+\begin_inset Formula $\pi_{t}^{e}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Run the simulation for 5 periods,
+ and for each period plot the new position of the AD and AS curves together with the equilibrium in a single figure.
+\end_layout
+
+\begin_layout Subsection
+Question 3
+\end_layout
+
+\begin_layout Standard
+Consider the case where 
+\begin_inset Formula $v_{t}$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+v_{t}=\rho v_{t-1}+\epsilon_{t},\,\,\,\,\epsilon_{t}\sim\mathcal{N}(0,\sigma_{\epsilon}),
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\rho=0.8$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{\epsilon}=0.01$
+\end_inset
+
+.
+ Initially,
+ 
+\begin_inset Formula $\pi_{0}^{e}=\pi^{\ast}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Simulating forward for 
+\begin_inset Formula $t=0,1,\dots,$
+\end_inset
+
+ can now be down as:
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $t>0$
+\end_inset
+
+:
+ Compute 
+\begin_inset Formula $\pi_{t}^{e}=\phi\pi_{t-1}^{e}+(1-\phi)\pi_{t-1}^{\star}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Draw random number 
+\begin_inset Formula $\epsilon_{t}\sim\mathcal{N}(0,\sigma_{\epsilon})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $v_{t}=\rho v_{t-1}+\epsilon_{t}$
+\end_inset
+
+ (where 
+\begin_inset Formula $v_{-1}=0$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $y_{t}^{\star}$
+\end_inset
+
+ and 
+\begin_inset Formula $\pi_{t}^{\star}$
+\end_inset
+
+ given 
+\begin_inset Formula $\pi_{t}^{e}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Run this simulation for 
+\begin_inset Formula $500$
+\end_inset
+
+ periods using the seed 
+\begin_inset Formula $123$
+\end_inset
+
+,
+ and plot the time series of output,
+ 
+\begin_inset Formula $y_{t}^{\star}$
+\end_inset
+
+,
+ inflation,
+ 
+\begin_inset Formula $\pi_{t}^{\star}$
+\end_inset
+
+,
+ and the demand shock 
+\begin_inset Formula $v_{t}$
+\end_inset
+
+.
+ Compute the standard deviation of output,
+ 
+\begin_inset Formula $y_{t}^{\star}$
+\end_inset
+
+,
+ and inflation,
+ 
+\begin_inset Formula $\pi_{t}^{\star}$
+\end_inset
+
+,
+ and their correlation.
+\end_layout
+
+\begin_layout Standard
+Repeat this exercise for 
+\begin_inset Formula $\rho=0.50$
+\end_inset
+
+ using the same random draws.
+\end_layout
+
+\end_body
+\end_document

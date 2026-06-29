@@ -1,0 +1,1617 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+
+
+
+% code
+\usepackage{xcolor}
+\usepackage{listings}
+
+
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{background}{HTML}{F5F5F5}
+\definecolor{keyword}{HTML}{4B69C6}
+\definecolor{string}{HTML}{448C27}
+\definecolor{comment}{HTML}{448C27}
+
+\usepackage{inconsolata}
+
+
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{comment},
+    keywordstyle=\color{keyword},
+    stringstyle=\color{string},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                                    
+    numbersep=10pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4,
+	showlines=true
+}
+
+\lstset{style=mystyle}
+
+
+
+\usepackage{babel}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding iso8859-15
+\fontencoding T1
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "mathpazo" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_bookmarks false
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref section
+\pdf_pdfusetitle false
+\pdf_quoted_options "urlcolor=blue"
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2.5cm
+\rightmargin 3cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset External
+	template PDFPages
+	filename front_page.pdf
+	display false
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newgeometry{left=3cm,right=3cm,top=2.5cm,bottom=2.5cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Danish Consumption
+\end_layout
+
+\begin_layout Subsection
+Consumption-income ratio
+\end_layout
+
+\begin_layout Standard
+Use an API call to download quarterly data on household disposable income and consumption from table 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{NKSO2}
+\end_layout
+
+\end_inset
+
+ at Statistics Denmark.
+ The disposable income variable is 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{B6GD}
+\end_layout
+
+\end_inset
+
+,
+ the consumption variable is 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{P3D}
+\end_layout
+
+\end_inset
+
+,
+ and the sector variable is 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{S1M}
+\end_layout
+
+\end_inset
+
+.
+ Plot the ratio of consumption to disposable income over time.
+ Additionally,
+ seasonally adjust the consumption and income series using 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{statsmodels.tsa.seasonal.STL}
+\end_layout
+
+\end_inset
+
+,
+ and plot the seasonally adjusted ratio.
+ Add horizontal lines for the mean in three sub-periods,
+ i) before 2008Q1,
+ ii) from 2010Q1 to 2019Q4,
+ iii) from 2021Q1 to the latest available observation.
+\end_layout
+
+\begin_layout Subsection
+Consumption shares
+\end_layout
+
+\begin_layout Standard
+Use an API call to download consumption data from table 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{NKHC021}
+\end_layout
+
+\end_inset
+
+ at Statistics Denmark in current prices and adjusted for seasonality.
+ Compare total consumption in this table with the consumption measure used in Question 1.1.
+ Compute and plot consumption shares in one or more figures,
+ which are easy to interpret.
+\end_layout
+
+\begin_layout Subsection
+Change in consumption shares
+\end_layout
+
+\begin_layout Standard
+Compute the change in each consumption share between the average in 1990 and the average of available quarters in 2025.
+ Make a bar chart of the increases and decreases in percentage points for all categories.
+ Repeat the exercise computing the change since average in 2019.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Labor supply with non-linear wage schedule
+\end_layout
+
+\begin_layout Standard
+A worker chooses labor supply 
+\begin_inset Formula $\ell\in[0,\ell_{\max}]$
+\end_inset
+
+.
+ Consumption is denoted 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Preferences are 
+\begin_inset Formula 
+\begin{equation}
+u(c,\ell)=\frac{c^{1-\sigma}-1}{1-\sigma}-\psi\,\frac{\ell^{1+\eta}}{1+\eta},\qquad\sigma>0,\ \sigma\neq1,\ \psi>0,\ \eta>0.\label{eq:u}
+\end{equation}
+
+\end_inset
+
+Throughout the problem use the following parameter values:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{5mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="none" valignment="top" special="@{}l">
+<column alignment="center" valignment="top">
+<column alignment="none" valignment="top" special="l@{}">
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Non-labor income 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y_{0}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Base wage 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $w$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Risk aversion 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Disutility scale 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\psi$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Curvature of disutility 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\eta$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Maximum hours 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ell_{\max}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.5$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{5mm}
+\end_layout
+
+\end_inset
+
+You can use the code in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{LaborSupplyModel.py}
+\end_layout
+
+\end_inset
+
+ uploaded together with the exam as your starting point.
+\end_layout
+
+\begin_layout Subsection
+Baseline (linear wage)
+\end_layout
+
+\begin_layout Standard
+In the baseline system,
+ the worker receives a constant wage 
+\begin_inset Formula $w$
+\end_inset
+
+ per hour:
+ 
+\begin_inset Formula 
+\begin{equation}
+c(\ell)=y_{0}+w\ell.\label{eq:c}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The first order condition is
+\begin_inset Formula 
+\begin{equation}
+wc^{-\sigma}=\psi\ell^{\eta}\label{eq:FOC}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Solve for 
+\begin_inset Formula $\ell^{\star}$
+\end_inset
+
+ with the three methods below and report 
+\begin_inset Formula $(\ell^{\star},c^{\star},u^{\star})$
+\end_inset
+
+:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A grid search
+\end_layout
+
+\begin_layout Enumerate
+A local optimizer
+\end_layout
+
+\begin_layout Enumerate
+A root finder using the first order condition
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $u(\ell)\equiv u(c(\ell),\ell)$
+\end_inset
+
+ on a grid 
+\begin_inset Formula $\ell\in[0,\ell_{\max}]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Create a figure with two panels:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $c(\ell)$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $\ell$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $u(\ell)$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $\ell$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{1mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mark 
+\begin_inset Formula $\ell^{\star}$
+\end_inset
+
+ from your favorite solution method as a vertical line.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Overtime pay
+\end_layout
+
+\begin_layout Standard
+Now the worker receives a higher marginal wage for overtime hours.
+ Let 
+\begin_inset Formula $\bar{\ell}$
+\end_inset
+
+ denote the overtime threshold.
+ Earnings are 
+\begin_inset Formula 
+\begin{equation}
+\text{earn}(\ell)=\begin{cases}
+w\ell, & \ell\leq\bar{\ell},\\
+w\bar{\ell}+w(1+\delta)(\ell-\bar{\ell}), & \ell>\bar{\ell},
+\end{cases}
+\end{equation}
+
+\end_inset
+
+and consumption is 
+\begin_inset Formula $c(\ell)=y_{0}+\text{earn}(\ell)$
+\end_inset
+
+.
+ Use 
+\begin_inset Formula $\bar{\ell}=0.9$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta=1.0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Plot 
+\begin_inset Formula $c(\ell)$
+\end_inset
+
+ and 
+\begin_inset Formula $u(\ell)$
+\end_inset
+
+ for 
+\begin_inset Formula $\ell\in[0,\ell_{\max}]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Use your plot (and/or a grid search) to verify that 
+\begin_inset Formula $u(\ell)$
+\end_inset
+
+ has 
+\emph on
+two local interior maxima
+\emph default
+ for this parameterization.
+\end_layout
+
+\begin_layout Enumerate
+Run a 
+\emph on
+local
+\emph default
+ optimizer twice,
+ once with initial guess 
+\begin_inset Formula $\ell_{0}=0.2$
+\end_inset
+
+ and once with 
+\begin_inset Formula $\ell_{0}=1.2$
+\end_inset
+
+.
+ Does the initial guess matter?
+ Why?
+ 
+\end_layout
+
+\begin_layout Enumerate
+Implement a 
+\begin_inset Quotes eld
+\end_inset
+
+robust
+\begin_inset Quotes erd
+\end_inset
+
+ solver that always returns the 
+\emph on
+global
+\emph default
+ maximizer.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+Hint:
+
+\emph default
+ Solve the problem separately on 
+\begin_inset Formula $[0,\bar{\ell}]$
+\end_inset
+
+ and 
+\begin_inset Formula $[\bar{\ell},\ell_{\max}]$
+\end_inset
+
+,
+ and evaluate the utility value in each region and pick the highest.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Labor market simulation
+\end_layout
+
+\begin_layout Standard
+In this assignment you will build and simulate a simple labor-market model with unemployment,
+ human capital dynamics,
+ and two worker types:
+ low-skilled (
+\begin_inset Formula $s=L$
+\end_inset
+
+) and high-skilled (
+\begin_inset Formula $s=H$
+\end_inset
+
+).
+ The goal is to simulate forward until the cross-sectional distribution does not change anymore,
+ and thus is (approximately) stationary.
+ You will then use the simulation to compare outcomes for low- and high-skilled workers.
+\end_layout
+
+\begin_layout Standard
+You can use the code in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstinline{LaborMarketModel.py}
+\end_layout
+
+\end_inset
+
+ uploaded together with the exam as your starting point.
+\end_layout
+
+\begin_layout Paragraph*
+State variables
+\end_layout
+
+\begin_layout Standard
+For each individual 
+\begin_inset Formula $i$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ (think of 
+\begin_inset Formula $t$
+\end_inset
+
+ as months),
+ the state is 
+\begin_inset Formula $(e_{it},d_{it},k_{it},s_{i}),$
+\end_inset
+
+where:
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $e_{it}\in\{0,1\}$
+\end_inset
+
+ is employment status (
+\begin_inset Formula $1$
+\end_inset
+
+ employed,
+ 
+\begin_inset Formula $0$
+\end_inset
+
+ unemployed),
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $d_{it}\in\{0,1,2,\dots\}$
+\end_inset
+
+ is unemployment duration (months),
+ 
+\begin_inset Formula $d_{it}=0$
+\end_inset
+
+ if employed,
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k_{it}$
+\end_inset
+
+ is 
+\emph on
+log human capital
+\emph default
+,
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $s_{i}\in\{L,H\}$
+\end_inset
+
+ is the worker type.
+ 
+\end_layout
+
+\begin_layout Paragraph*
+Human capital
+\end_layout
+
+\begin_layout Standard
+Log human capital follows an AR(1) process around a type-specific mean,
+ 
+\begin_inset Formula $\mu_{s_{i}}$
+\end_inset
+
+,
+ with depreciation,
+ 
+\begin_inset Formula $\delta_{u}$
+\end_inset
+
+,
+ during unemployment:
+ 
+\begin_inset Formula 
+\begin{equation}
+k_{i,t+1}=\mu_{s_{i}}+\rho\,(k_{it}-\mu_{s_{i}})-\delta_{u}\cdot\mathbf{1}\{e_{it}=0\}+\sigma_{h}\,\eta_{i,t+1},\qquad\eta_{i,t+1}\sim\mathcal{N}(0,1).
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Income
+\end_layout
+
+\begin_layout Standard
+While employed,
+ income has an idiosyncratic wage shock:
+ 
+\begin_inset Formula 
+\begin{equation}
+y_{it}=\begin{cases}
+\exp(a_{s_{i}}+k_{it}+\sigma_{y}\,\xi_{it}), & \text{if }e_{it}=1,\;\xi_{it}\sim\mathcal{N}(0,1),\\
+b\cdot\exp(a_{s_{i}}+k_{it}), & \text{if }e_{it}=0.
+\end{cases}
+\end{equation}
+
+\end_inset
+
+Here 
+\begin_inset Formula $b\in(0,1)$
+\end_inset
+
+ is a replacement rate.
+\end_layout
+
+\begin_layout Paragraph*
+Labor market transitions
+\end_layout
+
+\begin_layout Standard
+Employment evolves as follows:
+ 
+\end_layout
+
+\begin_layout Itemize
+If employed (
+\begin_inset Formula $e_{it}=1$
+\end_inset
+
+):
+ with probability 
+\begin_inset Formula $\texttt{sep\_rate}$
+\end_inset
+
+ the worker separates and becomes unemployed next period,
+ 
+\begin_inset Formula $e_{i,t+1}=0$
+\end_inset
+
+,
+ with 
+\begin_inset Formula $d_{i,t+1}=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+If unemployed (
+\begin_inset Formula $e_{it}=0$
+\end_inset
+
+) with duration 
+\begin_inset Formula $d_{it}\geq1$
+\end_inset
+
+:
+ with probability 
+\begin_inset Formula $f_{s_{i}}(d_{it})$
+\end_inset
+
+ the worker finds a job and becomes employed next period (
+\begin_inset Formula $e_{i,t+1}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $d_{i,t+1}=0$
+\end_inset
+
+).
+ Otherwise they remain unemployed and duration increases by one:
+ 
+\begin_inset Formula $d_{i,t+1}=d_{it}+1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph*
+Job-finding rate with duration dependence
+\end_layout
+
+\begin_layout Standard
+The job-finding probability declines with unemployment duration,
+\begin_inset Formula 
+\begin{equation}
+f_{s}(d)=\max\left\{ \min\left\{ 1,\;f_{0,s}\exp\big(-\lambda_{s}(d-1)\big)\right\} ,0.05\right\} ,\qquad d\ge1,
+\end{equation}
+
+\end_inset
+
+but never falls below 
+\begin_inset Formula $0.05$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Initialization (given in the code)
+\end_layout
+
+\begin_layout Standard
+To start the simulation at 
+\begin_inset Formula $t=0$
+\end_inset
+
+,
+ use a simple random initialization:
+ 
+\end_layout
+
+\begin_layout Itemize
+Draw types:
+ 
+\begin_inset Formula $s_{i}=H$
+\end_inset
+
+ with probability 
+\begin_inset Formula $0.40$
+\end_inset
+
+ (otherwise 
+\begin_inset Formula $s_{i}=L$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Itemize
+Draw initial employment:
+ Employed with probability 
+\begin_inset Formula $0.92$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+If employed,
+ set initial duration:
+ 
+\begin_inset Formula $d_{i0}=0$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Itemize
+If unemployed draw 
+\begin_inset Formula $d_{i0}$
+\end_inset
+
+ uniformly from 
+\begin_inset Formula $\{1,2,3,4,5,6\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Draw initial human capital from a stationary distribution of the AR(1) around 
+\begin_inset Formula $\mu_{s_{i}}$
+\end_inset
+
+ (ignoring unemployment depreciation at initialization):
+\begin_inset Formula 
+\[
+k_{i0}=\mu_{s_{i}}+\frac{\sigma_{h}}{\sqrt{1-\rho^{2}}}\,z_{i},\qquad z_{i}\sim\mathcal{N}(0,1).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This initialization is already implemented for you in the provided 
+\family typewriter
+setup_states()
+\family default
+ function.
+\end_layout
+
+\begin_layout Paragraph*
+Calibration
+\end_layout
+
+\begin_layout Standard
+Use the following baseline parameters:
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{5mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Low-skilled (
+\begin_inset Formula $L$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+High-skilled (
+\begin_inset Formula $H$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Human capital mean 
+\begin_inset Formula $\mu_{s}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.00$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.50$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wage intercept 
+\begin_inset Formula $a_{s}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.40$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2.80$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Baseline finding rate 
+\begin_inset Formula $f_{0,s}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.25$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.45$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Duration slope 
+\begin_inset Formula $\lambda_{s}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.08$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0.03$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{5mm}
+\end_layout
+
+\end_inset
+
+Common parameters:
+ 
+\begin_inset Formula 
+\[
+\rho=0.97,\quad\sigma_{h}=0.06,\quad\delta_{u}=0.03,\quad\sigma_{y}=0.20,\quad b=0.60,\quad\texttt{sep\_rate}=0.02.
+\]
+
+\end_inset
+
+Simulate a population of 
+\begin_inset Formula $N=50,000$
+\end_inset
+
+ individuals,
+ with a high-skilled share 
+\begin_inset Formula $\Pr(s_{i}=H)=0.40$
+\end_inset
+
+.
+ Use the fixed random seed 123 to make your results reproducible.
+\end_layout
+
+\begin_layout Paragraph*
+Simulation
+\end_layout
+
+\begin_layout Standard
+Simulate for 
+\begin_inset Formula $T=3,000$
+\end_inset
+
+ periods.
+ Your simulator must 
+\emph on
+store only the last 200 periods
+\emph default
+ (think of this as a small 
+\begin_inset Quotes eld
+\end_inset
+
+panel
+\begin_inset Quotes erd
+\end_inset
+
+ of stationary data).
+ Use this stored panel to answer the questions below.
+\end_layout
+
+\begin_layout Subsection
+Document stationarity
+\end_layout
+
+\begin_layout Standard
+Run the model with the baseline parameters.
+ Let the simulator return the last 200 periods and denote these periods by 
+\begin_inset Formula $t=-200,\dots,-1$
+\end_inset
+
+ (where 
+\begin_inset Formula $t=-1$
+\end_inset
+
+ is the final simulated period).
+\end_layout
+
+\begin_layout Enumerate
+Compute the selected moments (unemployment rate,
+ mean and standard deviation of 
+\begin_inset Formula $\log y$
+\end_inset
+
+) using the first half (
+\begin_inset Formula $t=-200,\dots,-101$
+\end_inset
+
+) and the second half (
+\begin_inset Formula $t=-100,\dots,-1$
+\end_inset
+
+).
+ Show that the moments are (almost) identical.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Compare the distribution of 
+\begin_inset Formula $\log y$
+\end_inset
+
+ and the distribution of unemployment duration among the unemployed for the two halves (
+\begin_inset Formula $-200\!:\!-100$
+\end_inset
+
+ vs.
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $-100\!:\!$
+\end_inset
+
+).
+ Argue that the distributions are the same.
+ 
+\end_layout
+
+\begin_layout Subsection
+
+\series bold
+Compare low- vs high-skilled
+\end_layout
+
+\begin_layout Standard
+Using the stored stationary panel (you may pool all 200 periods),
+ compare outcomes for low- and high-skilled workers.
+ Report and discuss at least:
+ the unemployment rate by type,
+ the mean and standard deviation of 
+\begin_inset Formula $\log y$
+\end_inset
+
+ by type,
+ and a summary of the duration distribution by type (e.g.
+\begin_inset space \space{}
+\end_inset
+
+mean duration among the unemployed and the share unemployed for more than 12 months).
+\end_layout
+
+\begin_layout Subsection
+Reasons for inequality
+\end_layout
+
+\begin_layout Standard
+The type-specific parameters are 
+\begin_inset Formula $(\mu_{s},a_{s},f_{0,s},\lambda_{s})$
+\end_inset
+
+.
+ Analyze which of these are most important for the differences between low- and high-skilled workers.
+ A simple approach is to run counterfactual simulations where you change 
+\emph on
+one
+\emph default
+ type-specific parameter at a time (e.g.
+\begin_inset space \space{}
+\end_inset
+
+set the high-skilled value equal to the low-skilled value) keeping the other parameters fixed,
+ and measure how the gaps in outcomes change.
+ Summarize your findings in a small table.
+\end_layout
+
+\end_body
+\end_document

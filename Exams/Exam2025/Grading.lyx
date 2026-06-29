@@ -1,0 +1,878 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+
+
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*, topsep=2pt, itemsep=1pt}
+
+\title{Grading Guide\\Programming for Economists, Winter Exam 2025/26}
+\author{}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children no
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 0
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+Grading Guid
+\series default
+e
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Programming for Economists
+\begin_inset Newline newline
+\end_inset
+
+Winter Exam 2025/26
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Data Analysis Project
+\end_layout
+
+\begin_layout Subsection*
+Problem 1:
+ Aggregate Inflation in Denmark
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.1
+\end_layout
+
+\begin_layout Itemize
+Retrieves PRIS113 data via an API call.
+\end_layout
+
+\begin_layout Itemize
+Constructs the CPI index (2020 = 100).
+\end_layout
+
+\begin_layout Itemize
+Computes month-to-month and 12-month inflation rates.
+\end_layout
+
+\begin_layout Itemize
+Produces clear time series plots with labeled axes and legend.
+\end_layout
+
+\begin_layout Itemize
+Provides a short interpretation of when the inflation surge ended.
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.2
+\end_layout
+
+\begin_layout Itemize
+Correctly defines and computes the weights 
+\begin_inset Formula $\kappa(k,\alpha)$
+\end_inset
+
+ for 
+\begin_inset Formula $\alpha=0,1,2,3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Computes instantaneous inflation using a rolling window or equivalent method.
+\end_layout
+
+\begin_layout Itemize
+Produces clean comparative plots for each 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Discusses how the timing of the inflation surge differs from Question 1.1.
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.3
+\end_layout
+
+\begin_layout Itemize
+Retrieves PRIS111 data for total CPI,
+ CPI excl.
+\begin_inset space \space{}
+\end_inset
+
+energy,
+ and core inflation.
+\end_layout
+
+\begin_layout Itemize
+Correctly computes 12-month inflation rates.
+\end_layout
+
+\begin_layout Itemize
+Plots the three series clearly since 2019.
+\end_layout
+
+\begin_layout Itemize
+Briefly discusses likely drivers of the post-pandemic inflation surge.
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.4
+\end_layout
+
+\begin_layout Itemize
+Retrieves all 4-digit PRIS111 product categories.
+\end_layout
+
+\begin_layout Itemize
+Computes 12-month inflation for each category with 
+\family typewriter
+groupby
+\family default
+ methods.
+\end_layout
+
+\begin_layout Itemize
+Produces percentile plots (25th,
+ 50th,
+ 75th).
+\end_layout
+
+\begin_layout Itemize
+Produces a histogram of price changes from Aug.
+\begin_inset space \space{}
+\end_inset
+
+2020 to Aug.
+\begin_inset space \space{}
+\end_inset
+
+2025.
+\end_layout
+
+\begin_layout Itemize
+Identifies and illustrates the top-10 and bottom-10 categories.
+\end_layout
+
+\begin_layout Itemize
+Gives a short descriptive interpretation of the distributional patterns.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Problem 2:
+ International Comparison
+\end_layout
+
+\begin_layout Subsubsection*
+Question 2.1
+\end_layout
+
+\begin_layout Itemize
+Retrieves CPI from Denmark Statistics and HICP from FRED.
+\end_layout
+
+\begin_layout Itemize
+Plots the two indexes on a comparable scale.
+\end_layout
+
+\begin_layout Itemize
+Comments on similarities,
+ differences,
+ and whether the indices are comparable.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 2.2
+\end_layout
+
+\begin_layout Itemize
+Retrieves HICP data for Denmark,
+ Austria,
+ Euro Area,
+ and the U.S.
+\end_layout
+
+\begin_layout Itemize
+Plots index levels and 12-month inflation rates since 2019.
+\end_layout
+
+\begin_layout Itemize
+Computes min,
+ max,
+ and mean inflation rates year-by-year.
+\end_layout
+
+\begin_layout Itemize
+Summarises cross-country differences in inflation paths clearly.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Problem 3:
+ Extension
+\end_layout
+
+\begin_layout Itemize
+Extends the analysis with at least one new dataset,
+ 
+\end_layout
+
+\begin_layout Itemize
+Produces 1–3 new figures with clear economic relevance,
+ 
+\end_layout
+
+\begin_layout Itemize
+Explains the insight yielded by the extension.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Model Analysis Project
+\end_layout
+
+\begin_layout Subsection*
+Problem 1:
+ Labor Supply
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.1
+\end_layout
+
+\begin_layout Itemize
+Evaluates and plots the utility function over a grid for 
+\begin_inset Formula $\ell_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Evaluates and plots the FOC 
+\begin_inset Formula $\varphi(p_{i},c_{i},\ell_{i})$
+\end_inset
+
+ over the same grid.
+\end_layout
+
+\begin_layout Itemize
+Finds optimal labor supply using a numerical optimizer.
+\end_layout
+
+\begin_layout Itemize
+Finds optimal labor supply using a root finder.
+\end_layout
+
+\begin_layout Itemize
+Compares the two methods and comments on speed and robustness.
+\end_layout
+
+\begin_layout Itemize
+Compiles results into one clear figure (with subplots allowed).
+ 
+\end_layout
+
+\begin_layout Itemize
+Repeats the exercise for the additional 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ values with minimal new code.
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.2
+\end_layout
+
+\begin_layout Itemize
+Computes the optimal labor supply function 
+\begin_inset Formula $\ell^{\star}(p_{i})$
+\end_inset
+
+ for 
+\begin_inset Formula $p_{i}\in[0.5,3.0]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Correctly handles the minimum feasible hours condition.
+\end_layout
+
+\begin_layout Itemize
+Produces clear plots for both 
+\begin_inset Formula $\zeta=0.1$
+\end_inset
+
+ and 
+\begin_inset Formula $\zeta=-0.1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Briefly comments on how the lump-sum component affects labor supply.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Problem 2:
+ Public Good
+\end_layout
+
+\begin_layout Subsubsection*
+Question 2.1
+\end_layout
+
+\begin_layout Itemize
+Draws a productivity distribution and computes labor supply for all workers.
+\end_layout
+
+\begin_layout Itemize
+Computes tax revenue 
+\begin_inset Formula $T(\tau,\zeta)$
+\end_inset
+
+ and the Social Welfare Function.
+\end_layout
+
+\begin_layout Itemize
+Repeats this across the required range of 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ values and 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Plots revenue and SWF clearly.
+\end_layout
+
+\begin_layout Itemize
+Indicates the approximate maximizing point(s).
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 2.2
+\end_layout
+
+\begin_layout Itemize
+Runs a numerical optimizer to find 
+\begin_inset Formula $(\tau^{\star},\zeta^{\star})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Checks robustness to starting values.
+\end_layout
+
+\begin_layout Itemize
+Produces local plots of 
+\begin_inset Formula $T(\tau,\zeta)$
+\end_inset
+
+ and SWF around the optimum.
+\end_layout
+
+\begin_layout Itemize
+Computes and plots the Lorenz curve of consumption at the optimum.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Problem 3:
+ Top Tax
+\end_layout
+
+\begin_layout Itemize
+Evaluates and plots the utility function under the top-tax system.
+\end_layout
+
+\begin_layout Itemize
+Computes and plots the FOC for the pre-kink and post-kink regions.
+\end_layout
+
+\begin_layout Itemize
+Finds optimal labor supply via numerical optimization.
+\end_layout
+
+\begin_layout Itemize
+Computes optimal labor supply via the four-step FOC approach.
+\end_layout
+
+\begin_layout Itemize
+Compares the two methods and comments on speed and differences.
+\end_layout
+
+\begin_layout Itemize
+Repeats the analysis for the additional productivity values with minimal new code.
+\end_layout
+
+\begin_layout Itemize
+Presents results clearly,
+ optionally in a multi-panel figure.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 3.2
+\end_layout
+
+\begin_layout Itemize
+Computes 
+\begin_inset Formula $\ell^{\star}(p_{i})$
+\end_inset
+
+ and 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ for 
+\begin_inset Formula $p_{i}\in[0.5,3.0]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Classifies workers into 
+\begin_inset Formula $\ell_{b}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $\ell_{k}$
+\end_inset
+
+,
+ and 
+\begin_inset Formula $\ell_{a}$
+\end_inset
+
+ cases.
+\end_layout
+
+\begin_layout Itemize
+Reports the proportions in each region.
+\end_layout
+
+\begin_layout Itemize
+Plots both labor supply and consumption clearly.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 3.3
+\end_layout
+
+\begin_layout Itemize
+Computes the SWF under the introduced top tax.
+\end_layout
+
+\begin_layout Itemize
+Computes and plots the Lorenz curve of consumption.
+\end_layout
+
+\begin_layout Itemize
+Explores alternative 
+\begin_inset Formula $(\omega,\kappa)$
+\end_inset
+
+ values and reports if SWF improves.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Problem 4:
+ Extension
+\end_layout
+
+\begin_layout Itemize
+Implements a meaningful model extension (preferences,
+ heterogeneity,
+ tax rules,
+ etc.).
+\end_layout
+
+\begin_layout Itemize
+Evaluates the extended model correctly.
+\end_layout
+
+\begin_layout Itemize
+Explains the resulting economic insight clearly
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Exam Project
+\end_layout
+
+\begin_layout Subsection*
+Problem 1:
+ Danish House Prices
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.1
+\end_layout
+
+\begin_layout Itemize
+Retrieves EJ56 data via an API call and drops provinces with missing values in the sample.
+ 
+\end_layout
+
+\begin_layout Itemize
+Correctly constructs a house price index per province.
+ 
+\end_layout
+
+\begin_layout Itemize
+Produces a clear time series plot of indexed prices by province and reports the ranking by total growth.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.2
+\end_layout
+
+\begin_layout Itemize
+Retrieves CPI data from PRIS113 via e.g.
+ an API call and aligns it with the house price sample.
+ 
+\end_layout
+
+\begin_layout Itemize
+Correctly constructs real house prices.
+ 
+\end_layout
+
+\begin_layout Itemize
+Produces a clear plot of real house prices by province.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.3
+\end_layout
+
+\begin_layout Itemize
+Reads BM010_houses.xlsx,
+ keeps municipalities without missing values,
+ and computes initial level and total growth.
+ 
+\end_layout
+
+\begin_layout Itemize
+Produces a scatter plot of initial level versus total growth with labeled axes.
+ 
+\end_layout
+
+\begin_layout Itemize
+States whether the relation is positive or not and labels the five top growth and five highest initial level municipalities.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 1.4
+\end_layout
+
+\begin_layout Itemize
+Correctly finds the pre-2008 peak for each municipality.
+ 
+\end_layout
+
+\begin_layout Itemize
+Correctly computes the change from this peak to the latest observation and identifies municipalities still below the peak.
+ 
+\end_layout
+
+\begin_layout Itemize
+Provides a simple figure that visualizes these changes and highlights municipalities that have not recovered.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Problem 2:
+ Exchange Economy
+\end_layout
+
+\begin_layout Subsubsection*
+Question 2.1
+\end_layout
+
+\begin_layout Itemize
+Correct computes and plots demand for good 1.
+\end_layout
+
+\begin_layout Itemize
+Correct computes and plots excess demand for good 1.
+\end_layout
+
+\begin_layout Itemize
+Identifies that there are three equilibria.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 2.2
+\end_layout
+
+\begin_layout Itemize
+Implements the tâtonnement algorithm with the given tolerance,
+ step size and iteration cap.
+ 
+\end_layout
+
+\begin_layout Itemize
+Runs it for the initial guesses and plots price and excess demand over iterations.
+ 
+\end_layout
+
+\begin_layout Itemize
+States correctly that the initial guess affects which equilibrium is reached.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 2.3
+\end_layout
+
+\begin_layout Itemize
+Correctly applies the tâtonnement algorithm for the grid of initial guesses.
+ 
+\end_layout
+
+\begin_layout Itemize
+Records the converged value (or flags non convergence) and plots 
+\begin_inset Formula $p_{1}^{0}$
+\end_inset
+
+ vs 
+\begin_inset Formula $p_{1}^{\ast}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Comments briefly on which equilibria are found and how the attraction regions look.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 2.4
+\end_layout
+
+\begin_layout Itemize
+Correctly implements the dampened Newton-Raphson algorithm with numerical derivative,
+ damping and non-negative price constraint.
+\end_layout
+
+\begin_layout Itemize
+Runs it for the grid of initial guesses and plots 
+\begin_inset Formula $p_{1}^{0}$
+\end_inset
+
+ versus the resulting 
+\begin_inset Formula $p_{1}^{\ast}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Briefly compares convergence and equilibria found to the tâtonnement results.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Problem 3:
+ The AS AD Model
+\end_layout
+
+\begin_layout Subsubsection*
+Question 3.1
+\end_layout
+
+\begin_layout Itemize
+Computes AD and SRAS curves for given parameters and inflation expectations equal to target inflation.
+ 
+\end_layout
+
+\begin_layout Itemize
+Produces a static plot with the AD curve,
+ the SRAS curve and the long run equilibrium.
+ 
+\end_layout
+
+\begin_layout Itemize
+Shifts the SRAS curve correctly when expectations jump to 0.08 and shows the new equilibrium on the same AD curve.
+\end_layout
+
+\begin_layout Subsubsection*
+Question 3.2
+\end_layout
+
+\begin_layout Itemize
+Sets up a temporary demand shock with 
+\begin_inset Formula $v_{0}=0.1$
+\end_inset
+
+ and inflation expectations updating adaptively over 5 periods.
+ 
+\end_layout
+
+\begin_layout Itemize
+Computes the corresponding short-run equilibrium output and inflation in each period.
+ 
+\end_layout
+
+\begin_layout Itemize
+Shows in one figure how the relevant curves move over the 5 periods so that the equilibrium path is visible.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Question 3.3
+\end_layout
+
+\begin_layout Itemize
+Implements the stochastic demand shock process and simulates the model for a 500 periods with adaptive expectations.
+ 
+\end_layout
+
+\begin_layout Itemize
+Produces time series plots for output,
+ inflation and the demand shock and reports basic moments (standard deviations and correlation).
+ 
+\end_layout
+
+\begin_layout Itemize
+Repeats the simulation for the alternative persistence parameter and comments briefly on the change in moments.
+ 
+\end_layout
+
+\end_body
+\end_document
