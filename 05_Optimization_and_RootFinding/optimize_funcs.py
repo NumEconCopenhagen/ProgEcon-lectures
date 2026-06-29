@@ -1,17 +1,8 @@
-# optimize_funcs.py
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 
-# --- module-level state captured by the callback ---
-x1s = []
-x2s = []
-fs  = []
-nit = 0
-init_guess = None
-obj = None
-
-## Initialize and collect iteration history for scipy.optimize.minimize
+# Initialize and collect iteration history for scipy.optimize.minimize
 def init_collector(obj_func, init_guess_in):
     """Initialize the iteration history before calling scipy.optimize.minimize."""
 
@@ -24,16 +15,19 @@ def init_collector(obj_func, init_guess_in):
     fs  = [obj(init_guess)]  # objective at initial guess
     nit = 0
 
-# Called in every iteration of SLSQP to collect the history.
+# called in every iteration of SLSQP to collect the history.
 def collect(x):
     """SLSQP callback: collects iterate x and objective value."""
+    
     global x1s, x2s, fs, nit, obj
+    
     x1s.append(x[0])
     x2s.append(x[1])
     fs.append(obj(x))
+
     nit += 1
 
-## Plots the trajectory of the objective (or utility) over iterations.
+# plots the trajectory of the objective (or utility) over iterations.
 def convergence_steps(plot_utility=False, ax=None, show=True, return_data=False):
     """
     Plot objective (or utility) by iteration using collected history.
@@ -59,9 +53,6 @@ def convergence_steps(plot_utility=False, ax=None, show=True, return_data=False)
     ax.xaxis.set_major_locator(MaxNLocator(integer=True))
 
     fig.tight_layout()
-    if show:
-        plt.show()
+    if show: plt.show()
 
-    if return_data:
-        return fig, ax, y
-    # else: return None implicitly
+    if return_data: return fig, ax, y

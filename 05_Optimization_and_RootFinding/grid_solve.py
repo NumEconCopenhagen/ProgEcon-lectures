@@ -5,7 +5,7 @@ from types import SimpleNamespace
 def find_best_choice(u_func,alpha,I,p1,p2,N1,N2,do_print=True):
     """ find_best_choice: brute force search for best choice of x1,x2 """
 
-    # a. pre- allocate numpy arrays (faster than growing arrays inside loops)
+    # a. pre-allocate numpy arrays (faster than growing arrays inside loops)
     shape_tuple = (N1,N2)
     x1_values = np.empty(shape_tuple)
     x2_values = np.empty(shape_tuple)
@@ -40,7 +40,7 @@ def find_best_choice(u_func,alpha,I,p1,p2,N1,N2,do_print=True):
     if do_print:
         print_solution(x1_best,x2_best,u_best,I,p1,p2)
 
-   # Return everything handy for plotting/diagnostics
+    # Return everything handy for plotting/diagnostics
     return SimpleNamespace(x1_best=x1_best,x2_best=x2_best,u_best=u_best,x1_values=x1_values,x2_values=x2_values,u_values=u_values)
 
 def find_best_choice_monotone(u_func,alpha,I,p1,p2,N,do_print=True):

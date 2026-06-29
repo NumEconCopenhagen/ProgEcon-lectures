@@ -1141,19 +1141,6 @@ problem sets,
 \begin_layout Itemize
 
 \series bold
-Git:
- 
-\series default
-A version-control system for tracking changes in files and coordinating work 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- integrated in VSCode
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
 \bar under
 Need-to-now
 \bar default
@@ -1174,6 +1161,34 @@ Need-to-now
 
 Download zip
 \begin_inset Quotes ard
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Git 
+\series default
+(more on this later)
+\series bold
+:
+ 
+\series default
+A version-control system for tracking changes in files and coordinating work 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ integrated in VSCode
+\begin_inset Newline newline
 \end_inset
 
 
@@ -1217,7 +1232,7 @@ status open
 Lectures:
  
 \series default
-Daily 9-10 (except 13-08)
+Daily 9-11 (except 13-08)
 \begin_inset ERT
 status open
 
@@ -1562,22 +1577,22 @@ Problem set 1.
 
 \begin_layout Enumerate
 Problem set 2.
- The Consumer Problem
+ Optimization
 \end_layout
 
 \begin_layout Enumerate
 Problem set 3:
- The Labor Market
+ Random Numbers
 \end_layout
 
 \begin_layout Enumerate
 Problem set 4.
- Descriptive Economic I
+ Descriptive Economics I
 \end_layout
 
 \begin_layout Enumerate
 Problem set 5.
- Descriptive Economic II + Data Project
+ Descriptive Economics II + Data Project
 \end_layout
 
 \begin_layout Enumerate
@@ -1795,10 +1810,6 @@ participate actively
 \end_layout
 
 \begin_layout Enumerate
-Watch videos 
-\end_layout
-
-\begin_layout Enumerate
 
 \emph on
 Try out the code yourself
@@ -1820,12 +1831,12 @@ status open
 Exercises:
 
 \series default
- Work on problem sets and ask questions to your fellow students and the teaching assistants
+ Small introduction + you work on problem sets and ask questions to your fellow students and the teaching assistants
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Solve tasks and problems
+Solve small tasks
 \end_layout
 
 \begin_layout Enumerate
@@ -1847,7 +1858,9 @@ Note:
  
 \series default
 OK to peak at answers,
- but write the solution yourself
+ 
+\emph on
+but write the solution yourself
 \end_layout
 
 \end_deeper
@@ -1980,7 +1993,7 @@ Fellow students
 \end_layout
 
 \begin_layout Enumerate
-Teachers (in person or e-mail)
+Teachers
 \end_layout
 
 \begin_layout Standard
