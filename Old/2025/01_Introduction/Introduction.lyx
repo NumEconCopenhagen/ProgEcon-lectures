@@ -1,5 +1,5 @@
-#LyX 2.5 created this file. For more info see https://www.lyx.org/
-\lyxformat 643
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -9,21 +9,26 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning}
 \usepackage{appendixnumberbeamer}
+
 \usetheme[progressbar=frametitle,block=fill]{metropolis}
+
 % margin
 \setbeamersize{text margin right=1.5cm}
+
 % colors
 \colorlet{DarkRed}{red!70!black}
 \setbeamercolor{normal text}{fg=black}
 \setbeamercolor{alerted text}{fg=DarkRed}
 \setbeamercolor{progress bar}{fg=DarkRed}
 \setbeamercolor{button}{bg=DarkRed}
+
 % width of seperators
 \makeatletter
 \setlength{\metropolis@titleseparator@linewidth}{1pt}
 \setlength{\metropolis@progressonsectionpage@linewidth}{1pt}
 \setlength{\metropolis@progressinheadfoot@linewidth}{1pt}
 \makeatother
+
 % new alert block
 \newlength\origleftmargini
 \setlength\origleftmargini\leftmargini
@@ -37,21 +42,24 @@
 \setbeamertemplate{mini frame in current subsection}{}
 \setbeamercolor{section in head/foot}{fg=normal text.bg, bg=structure.fg}
 \setbeamercolor{subsection in head/foot}{fg=normal text.bg, bg=structure.fg}
+
 % footer
 \makeatletter
 \setbeamertemplate{footline}{%
     \begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
     \end{beamercolorbox}
     \begin{beamercolorbox}{section in head/foot}
-      \vskip1pt\insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll \insertframenumber{} / \inserttotalframenumber \hskip2pt}\vskip3pt%
+      \vskip1pt\insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll \insertframenumber{} / \inserttotalframenumber \hskip2pt}\vskip3pt% 
     \end{beamercolorbox}%
     \begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
     \end{beamercolorbox}
 }
 \makeatother
+
 % toc
 \setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsectionnumber.~\inserttocsection\par}
 \setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection\par}
+
 % links
 \usepackage{hyperref}
 \hypersetup{%
@@ -111,19 +119,11 @@
 \use_indices false
 \paperorientation portrait
 \suppress_date false
-\justification default
-\crossref_package prettyref
+\justification true
+\use_refstyle 0
 \use_formatted_ref 0
 \use_minted 0
 \use_lineno 0
-\backgroundcolor none
-\fontcolor none
-\notefontcolor lightgray
-\boxbgcolor red
-\table_border_color default
-\table_odd_row_color default
-\table_even_row_color default
-\table_alt_row_colors_start 1
 \index Index
 \shortcut idx
 \color #008000
@@ -149,7 +149,6 @@
 \html_be_strict false
 \docbook_table_output 0
 \docbook_mathml_prefix 1
-\docbook_mathml_version 0
 \end_header
 
 \begin_body
@@ -160,6 +159,7 @@ status open
 
 \begin_layout Plain Layout
 
+
 \backslash
 title{Introduction 
 \backslash
@@ -167,6 +167,7 @@ vspace{-2mm}}
 \end_layout
 
 \begin_layout Plain Layout
+
 
 \backslash
 subtitle{Programming for Economists 
@@ -176,11 +177,17 @@ vspace{-4mm}}
 
 \begin_layout Plain Layout
 
+
 \backslash
-author{Jeppe Druedahl}
+author{Jeppe Druedahl
+\backslash
+
+\backslash
+Brigitte Hochmuth}
 \end_layout
 
 \begin_layout Plain Layout
+
 
 \backslash
 date{}
@@ -191,16 +198,19 @@ date{}
 \end_layout
 
 \begin_layout Plain Layout
+
 {
 \end_layout
 
 \begin_layout Plain Layout
+
 
 \backslash
 setbeamertemplate{footline}{} 
 \end_layout
 
 \begin_layout Plain Layout
+
 
 \backslash
 begin{frame}
@@ -212,6 +222,7 @@ begin{frame}
 
 \begin_layout Plain Layout
 
+
 \backslash
 maketitle
 \end_layout
@@ -222,11 +233,13 @@ maketitle
 
 \begin_layout Plain Layout
 
+
 \backslash
 end{frame}
 \end_layout
 
 \begin_layout Plain Layout
+
 }
 \end_layout
 
@@ -235,6 +248,7 @@ end{frame}
 \end_layout
 
 \begin_layout Plain Layout
+
 
 \backslash
 addtocounter{framenumber}{-1}
@@ -246,11 +260,13 @@ addtocounter{framenumber}{-1}
 
 \begin_layout Plain Layout
 
+
 \backslash
 begin{frame}<beamer>
 \end_layout
 
 \begin_layout Plain Layout
+
 
 \backslash
 frametitle{Plan}
@@ -258,11 +274,13 @@ frametitle{Plan}
 
 \begin_layout Plain Layout
 
+
 \backslash
 tableofcontents[]
 \end_layout
 
 \begin_layout Plain Layout
+
 
 \backslash
 end{frame}
@@ -296,6 +314,7 @@ Intended learning goals
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -398,6 +417,7 @@ status open
 
 \begin_layout Plain Layout
 
+
 \backslash
 vspace{2mm}
 \end_layout
@@ -414,6 +434,7 @@ vspace{2mm}
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -480,6 +501,7 @@ Active learning
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -520,6 +542,7 @@ You have to be able to acquire new tools on your own
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -557,6 +580,7 @@ easily verifiable
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -597,6 +621,7 @@ Scientific programming
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -622,6 +647,7 @@ math
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -663,6 +689,7 @@ run code
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -698,6 +725,7 @@ Documentation helps removing bugs
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -777,6 +805,7 @@ status open
 
 \begin_layout Plain Layout
 
+
 \backslash
 vspace{2mm}
 \end_layout
@@ -784,6 +813,46 @@ vspace{2mm}
 \end_inset
 
  
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Brigitte Hochmuth
+\series default
+,
+ Assistant Professor
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+web:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "brigittehochmuth.net/"
+target "https://www.brigittehochmuth.net/"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e-mail:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "bhoc@econ.ku.dk"
+target "bhoc@econ.ku.dk"
+type "mailto:"
+literal "false"
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -800,7 +869,7 @@ vspace{2mm}
 status open
 
 \begin_layout Plain Layout
-Second time
+First time
 \end_layout
 
 \end_inset
@@ -829,7 +898,7 @@ literal "false"
 
 \begin_deeper
 \begin_layout Enumerate
-Higher level
+Slightly higher level
 \end_layout
 
 \begin_layout Enumerate
@@ -840,7 +909,7 @@ Almost fully video-based (few physical lectures)
 \begin_layout Itemize
 
 \series bold
-Second time for this course
+First time for this course
 \end_layout
 
 \begin_deeper
@@ -850,15 +919,8 @@ Second time for this course
 All of your feedback is very important for improving the course!
 \end_layout
 
-\begin_deeper
-\begin_layout Standard
-(since 1st time:
- restructured and simpler economic problems)
-\end_layout
-
-\end_deeper
 \begin_layout Enumerate
-Now an obligatory course on the 3rd semester
+From next year the course is obligatory on the 3rd semester
 \end_layout
 
 \begin_layout Enumerate
@@ -920,7 +982,8 @@ Distribution:
 Editor/IDE
 \series default
 :
- VSCode (with free copilot)
+ VSCode (with free copilot,
+ GPT 4.1+)
 \end_layout
 
 \end_deeper
@@ -1098,6 +1161,7 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
+
 []
 \end_layout
 
@@ -1151,35 +1215,104 @@ A version-control system for tracking changes in files and coordinating work
  integrated in VSCode
 \end_layout
 
-\begin_layout Itemize
-
-\series bold
-\bar under
-Need-to-now
-\bar default
-:
-
-\series default
- Click on 
-\begin_inset Quotes ald
-\end_inset
-
-<> Code
-\begin_inset Quotes ard
-\end_inset
-
- and 
-\begin_inset Quotes ald
-\end_inset
-
-Download zip
-\begin_inset Quotes ard
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Download course content guide
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Follow the 
+\begin_inset CommandInset href
+LatexCommand href
+name "installation guide"
+target "https://sites.google.com/view/numeconcph-progecon/guides/installation"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Open 
+\emph on
+VScode
+\end_layout
+
+\begin_layout Enumerate
+Windows:
+ Pres 
+\emph on
+Ctrl+Shift+P 
+\emph default
+to
+\emph on
+ command control palette
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Mac:
+ Press Cmd+Shift+P
+\end_layout
+
 \end_deeper
+\begin_layout Enumerate
+Write 
+\emph on
+Git:
+ Clone
+\end_layout
+
+\begin_layout Enumerate
+Use
+\emph on
+ https://github.com/NumEconCopenhagen/ProgEcon-lectures
+\end_layout
+
+\begin_layout Enumerate
+Repeat with 
+\emph on
+https://github.com/NumEconCopenhagen/ProgEcon-exercises
+\end_layout
+
+\begin_layout Enumerate
+Create copies of the folder to work in
+\end_layout
+
+\begin_layout Enumerate
+You can update later with 
+\emph on
+Git:
+ Sync
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1207,6 +1340,7 @@ Lectures,
 status open
 
 \begin_layout Plain Layout
+
 <1->
 \end_layout
 
@@ -1217,11 +1351,23 @@ status open
 Lectures:
  
 \series default
-Daily 9-10 (except 13-08)
+36,
+ 39-41,
+ 43-50 (see 
+\begin_inset CommandInset href
+LatexCommand href
+name "calendar"
+target "https://sites.google.com/view/numeconcph-progecon/calendar"
+literal "false"
+
+\end_inset
+
+)
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
+
 
 \backslash
 vspace{1mm}
@@ -1237,6 +1383,7 @@ vspace{1mm}
 status open
 
 \begin_layout Plain Layout
+
 <1->
 \end_layout
 
@@ -1247,11 +1394,13 @@ status open
 Exercises:
 
 \series default
- Daily 13-16 (except 20-08)
+ 37-41,
+ 43-51
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
+
 
 \backslash
 vspace{1mm}
@@ -1267,6 +1416,7 @@ vspace{1mm}
 status open
 
 \begin_layout Plain Layout
+
 <2->
 \end_layout
 
@@ -1290,7 +1440,8 @@ literal "false"
 
 \begin_deeper
 \begin_layout Enumerate
-Basic programming test (on 
+Sep:
+ Basic programming test (on 
 \begin_inset CommandInset href
 LatexCommand href
 name "DataCamp.com"
@@ -1304,12 +1455,14 @@ literal "false"
 \end_layout
 
 \begin_layout Enumerate
-Project 1:
+Oct:
+ Project 1:
  Data project 
 \end_layout
 
 \begin_layout Enumerate
-Project 2:
+Nov-Dec:
+ Project 2:
  Model project
 \end_layout
 
@@ -1319,6 +1472,7 @@ Project 2:
 status open
 
 \begin_layout Plain Layout
+
 <2->
 \end_layout
 
@@ -1341,6 +1495,7 @@ Portfolio of revised projects (40%)
 status open
 
 \begin_layout Plain Layout
+
 <2->
 \end_layout
 
@@ -1359,6 +1514,7 @@ Grading:
 status open
 
 \begin_layout Plain Layout
+
 <2->
 \end_layout
 
@@ -1404,6 +1560,7 @@ status open
 
 \begin_layout Plain Layout
 
+
 \backslash
 vspace{-2mm}
 \backslash
@@ -1415,10 +1572,11 @@ footnotesize
 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 
 \series bold
-Basics 
+Week 37-38:
+ Basics 
 \series default
 (types,
  containers,
@@ -1429,15 +1587,40 @@ Basics
  functions,
  floating point numbers,
  classes,
- numpy,
- print,
- plot)
+ numpy)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\emph on
+online videos instead of physical lectures
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 
 \series bold
-Tools 
+Week 39-41:
+ Data 
+\series default
+(print,
+ plot,
+ save/load,
+ online data,
+ descriptive economics,
+ structure and documentation,
+ workflow and debugging,
+ git)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Week 43-44:
+ Tools 
 \series default
 (optimization,
  root-finding,
@@ -1445,34 +1628,29 @@ Tools
  simulation)
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 
 \series bold
-Data 
+Week 45-48:
+
 \series default
-(save/load,
- online data,
- descriptive economics,
- ,
- git)
-\end_layout
-
-\begin_layout Enumerate
-
+ 
 \series bold
 Models
 \series default
  (Solow,
  Walras,
  AS-AD,
- calibration/estimation,
- structure and documentation,
- workflow and debugging,
- git)
+ calibration/estimation)
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 
+\series bold
+Week 49-50:
+
+\series default
+ 
 \series bold
 Perspectives 
 \series default
@@ -1531,6 +1709,7 @@ status open
 
 \begin_layout Plain Layout
 
+
 \backslash
 vspace{-2mm}
 \backslash
@@ -1542,96 +1721,104 @@ footnotesize
 
 \end_layout
 
-\begin_layout Enumerate
-Problem Set 0:
- Getting started + DataCamp
+\begin_layout Itemize
+
+\series bold
+Week 37-39:
+
+\series default
+ DataCamp + Problem Set 0:
+ Getting started
 \end_layout
 
-\begin_layout Enumerate
-DataCamp
+\begin_layout Itemize
+
+\series bold
+Week 40:
+
+\series default
+ Problem set 1.
+ Printing and plotting
 \end_layout
 
-\begin_layout Enumerate
-DataCamp
+\begin_layout Itemize
+
+\series bold
+Week 41:
+
+\series default
+ Problem set 2.
+ Descriptive economic analysis
 \end_layout
 
-\begin_layout Enumerate
-Problem set 1.
- Printing and Plotting
+\begin_layout Itemize
+
+\series bold
+Week 43:
+ 
+\series default
+Work on data project + intro to git
 \end_layout
 
-\begin_layout Enumerate
-Problem set 2.
- The Consumer Problem
+\begin_layout Itemize
+
+\series bold
+Week 44:
+
+\series default
+ Problem set 3.
+ Solving consumer problems
 \end_layout
 
-\begin_layout Enumerate
-Problem set 3:
- The Labor Market
+\begin_layout Itemize
+
+\series bold
+Week 45:
+
+\series default
+ Problem set 4:
+ Simulating economic dynamics (+ feedback)
 \end_layout
 
-\begin_layout Enumerate
-Problem set 4.
- Descriptive Economic I
+\begin_layout Itemize
+
+\series bold
+Week 46:
+
+\series default
+ Problem set 5:
+ Solving and simulating Solow models
 \end_layout
 
-\begin_layout Enumerate
-Problem set 5.
- Descriptive Economic II + Data Project
+\begin_layout Itemize
+
+\series bold
+Week 47:
+
+\series default
+ Problem set 6.
+ Solving exchange and production economies
 \end_layout
 
-\begin_layout Enumerate
-Work on Data Project
+\begin_layout Itemize
+
+\series bold
+Week 48:
+
+\series default
+ Problem set 7.
+ Simulating AS-AD models
 \end_layout
 
-\begin_layout Enumerate
-Problem set 6:
- Solow
-\begin_inset Newline newline
-\end_inset
+\begin_layout Itemize
 
-(hand-in data project)
+\series bold
+Week 49-51:
+ 
+\series default
+Work on your model analysis project + feedback + exam prep
 \end_layout
 
-\begin_layout Enumerate
-Problem set 7:
- Walras
-\end_layout
-
-\begin_layout Enumerate
-Problem set 8:
- AS-AD (+ Data Project feedback)
-\end_layout
-
-\begin_layout Enumerate
-Model Project (+ intro to git)
-\end_layout
-
-\begin_layout Enumerate
-Work on Model Project (+ exam preparation)
-\begin_inset Newline newline
-\end_inset
-
-(hand-in model project)
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-vspace{2mm}
-\end_layout
-
-\end_inset
-
-Receive written feedback om Model Project) + Exam
-\end_layout
-
-\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -1659,6 +1846,7 @@ Learning phases
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -1682,6 +1870,7 @@ How does it all fit together!?!?!
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -1709,6 +1898,7 @@ But I begin to be able to do some cool stuff.
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -1731,6 +1921,7 @@ But the combination is really powerful.
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -1776,6 +1967,7 @@ Your work-flow
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -1810,6 +2002,7 @@ Try out the code yourself
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -1856,6 +2049,7 @@ OK to peak at answers,
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -1908,6 +2102,7 @@ Getting help
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -1930,6 +2125,7 @@ Observation:
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -1956,6 +2152,7 @@ Everybody often forgets the correct syntax
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -1996,6 +2193,7 @@ Teachers (in person or e-mail)
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -2048,10 +2246,6 @@ You must complete the following courses on DataCamp
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-Required:
-\end_layout
-
 \begin_layout Enumerate
 Introduction to Python
 \end_layout
@@ -2060,16 +2254,8 @@ Introduction to Python
 Intermediate Python
 \end_layout
 
-\begin_layout Standard
-Optional:
-\end_layout
-
 \begin_layout Enumerate
 Introduction to Functions in Python
-\end_layout
-
-\begin_layout Enumerate
-Introduction to NumPy
 \end_layout
 
 \begin_layout Enumerate
@@ -2079,6 +2265,10 @@ Intermediate Object-Oriented Programming in Python
 
 (chapter:
  Overloading and Multiple Inheritance)
+\end_layout
+
+\begin_layout Enumerate
+Introduction to NumPy
 \end_layout
 
 \end_deeper
@@ -2144,6 +2334,10 @@ Document code
 Present results in text form and in figures
 \end_layout
 
+\begin_layout Enumerate
+Use GitHub
+\end_layout
+
 \end_deeper
 \begin_layout Itemize
 
@@ -2187,7 +2381,15 @@ Fully documented python files
 Hand-in:
  
 \series default
-Upload on Absalon
+Create and commit folder called 
+\begin_inset Quotes eld
+\end_inset
+
+dataproject
+\begin_inset Quotes erd
+\end_inset
+
+ in your GitHub repository
 \end_layout
 
 \end_deeper
@@ -2287,7 +2489,15 @@ Fully documented python files
 Hand-in:
  
 \series default
-Upload on Absalon
+Create and commit folder called 
+\begin_inset Quotes eld
+\end_inset
+
+modelproject
+\begin_inset Quotes erd
+\end_inset
+
+ in your GitHub repository
 \end_layout
 
 \end_deeper
@@ -2367,6 +2577,7 @@ Your to-do list
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -2394,6 +2605,7 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -2407,6 +2619,11 @@ Second priority:
 Install 
 \series bold
 Anaconda
+\series default
+,
+ 
+\series bold
+Git
 \series default
  and 
 \series bold
@@ -2433,6 +2650,7 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
@@ -2443,7 +2661,19 @@ status open
 Third priority:
  
 \series default
-Download slides and exercises
+Download slides and exercises with git
+\begin_inset Newline newline
+\end_inset
+
+(see 
+\begin_inset Quotes ald
+\end_inset
+
+Download course content guide
+\begin_inset Quotes ard
+\end_inset
+
+-slide)
 \end_layout
 
 \begin_layout Enumerate
@@ -2451,6 +2681,7 @@ Download slides and exercises
 status open
 
 \begin_layout Plain Layout
+
 <+->
 \end_layout
 
