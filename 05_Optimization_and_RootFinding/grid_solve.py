@@ -3,15 +3,14 @@ import numpy as np
 from types import SimpleNamespace
 
 def find_best_choice(u_func,alpha,I,p1,p2,N1,N2,do_print=True):
-    """ find_best_choice: brute force search for best choice of x1,x2 """
-
-    # a. pre-allocate numpy arrays (faster than growing arrays inside loops)
+    
+    # a. allocate numpy arrays
     shape_tuple = (N1,N2)
     x1_values = np.empty(shape_tuple)
     x2_values = np.empty(shape_tuple)
     u_values = np.empty(shape_tuple)
     
-    # b. start from guess of x1=x2=0 (left corner of the solution)
+    # b. start from guess of x1=x2=0
     x1_best = 0
     x2_best = 0
     u_best = u_func(0,0,alpha=alpha)
@@ -24,7 +23,7 @@ def find_best_choice(u_func,alpha,I,p1,p2,N1,N2,do_print=True):
             x1_values[i,j] = x1 = (i/(N1-1))*I/p1
             x2_values[i,j] = x2 = (j/(N2-1))*I/p2
             
-            # ii. utility and feasibility
+            # ii. utility
             if p1*x1 + p2*x2 <= I: # u(x1,x2) if expenditures <= income 
                 u_values[i,j] = u_func(x1,x2,alpha=alpha)
             else: # u(0,0) if expenditures > income, not allowed
@@ -40,11 +39,9 @@ def find_best_choice(u_func,alpha,I,p1,p2,N1,N2,do_print=True):
     if do_print:
         print_solution(x1_best,x2_best,u_best,I,p1,p2)
 
-    # Return everything handy for plotting/diagnostics
     return SimpleNamespace(x1_best=x1_best,x2_best=x2_best,u_best=u_best,x1_values=x1_values,x2_values=x2_values,u_values=u_values)
 
 def find_best_choice_monotone(u_func,alpha,I,p1,p2,N,do_print=True):
-    """ find_best_choice_monotone: brute force search for best choice of x1,x2 with monotonicity assumption """
     
     # a. allocate numpy arrays
     shape_tuple = (N)
@@ -82,8 +79,8 @@ def find_best_choice_monotone(u_func,alpha,I,p1,p2,N,do_print=True):
 
 # function for printing the solution
 def print_solution(x1,x2,u,I,p1,p2):
-    print(f'x1 = {x1:.4f}')
-    print(f'x2 = {x2:.4f}')
-    print(f'u  = {u:.4f}')
+    print(f'x1 = {x1:.5f}')
+    print(f'x2 = {x2:.5f}')
+    print(f'u  = {u:.5f}')
     print(f'I-p1*x1-p2*x2 = {I-p1*x1-p2*x2:.8f}')
-    print(f'x1*p1/I = {x1*p1/I:.4f}')
+    print(f'x1*p1/I = {x1*p1/I:.5f}')
