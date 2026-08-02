@@ -783,7 +783,47 @@ vspace{2mm}
 
 \end_inset
 
- 
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Ongoing research:
+
+\series default
+ Using 
+\begin_inset Quotes ald
+\end_inset
+
+deep learning
+\begin_inset Quotes ard
+\end_inset
+
+ to solve a large life-cycle model estimated on Danish individual-level data
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+vspace{2mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename DALI.png
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -813,7 +853,10 @@ Second time
 
 \series bold
 Previous course:
- 
+\begin_inset Newline newline
+\end_inset
+
+
 \series default
 
 \begin_inset CommandInset href
@@ -895,7 +938,7 @@ Python distribution and VSCode
 \begin_layout Itemize
 We work with 
 \series bold
-Python 3.13
+Python 3.14
 \end_layout
 
 \begin_layout Itemize
@@ -1513,9 +1556,9 @@ More screen capture videos
 \series default
  from 
 \emph on
-Introduction to Programming and Numerical Analysis 
+Introduction to Programming and Numerical Analysis
 \emph default
-and are extra material
+ are extra material
 \end_layout
 
 \end_deeper
