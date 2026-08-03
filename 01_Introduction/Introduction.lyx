@@ -358,7 +358,7 @@ big data
 \begin_layout Enumerate
 Numerically solve and simulate economic models
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Micro and Macro
@@ -1275,7 +1275,7 @@ status open
 Lectures:
  
 \series default
-Daily 9-11 (except 13-08)
+Daily 9-11 (except Aug 13)
 \begin_inset ERT
 status open
 
@@ -1305,7 +1305,7 @@ status open
 Exercises:
 
 \series default
- Daily 13-16 (except 20-08)
+ Daily 13-16 (except Aug 20)
 \begin_inset ERT
 status open
 
@@ -1391,7 +1391,7 @@ Portfolio of revised projects (40%)
 \begin_inset Newline newline
 \end_inset
 
-+ 48 hours home assignment (60%)
++ 36 hours home assignment (60%)
 \end_layout
 
 \begin_layout Itemize
@@ -1510,9 +1510,7 @@ Data
 \series default
 (save/load,
  online data,
- descriptive economics,
- ,
- git)
+ descriptive economics)
 \end_layout
 
 \begin_layout Enumerate
@@ -2501,7 +2499,7 @@ status open
 Third priority:
  
 \series default
-Download slides and exercises
+Download lecture and exercise material
 \end_layout
 
 \begin_layout Enumerate
