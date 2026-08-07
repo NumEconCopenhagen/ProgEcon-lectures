@@ -459,9 +459,6 @@ average
  income within each decile group.
  Since every decile group contains the same number of people,
  the income share of the top decile is
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula 
 \[
 \text{top 10 pct. share}=\frac{\bar{y}_{10}}{\sum^{10}_{d=1}\bar{y}_{d}}
@@ -522,12 +519,38 @@ Fitting a polynomial trend of degree
  that solve
 \begin_inset Formula 
 \[
-\min_{\beta}\,S(\beta)=\sum_{i}\left(y_{i}-\sum^{p}_{k=0}\beta_{k}t^{k}_{i}\right)^{2}
+\min_{\beta}\,S(\beta)=\sum_{i}\left(y_{i}-\sum^{p}_{k=0}\beta_{k}t^{k}_{i}\right)^{2},
 \]
 
 \end_inset
 
+where 
+\begin_inset Formula $i$
+\end_inset
 
+ is an index for each observation with Gini coefficient 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ and where 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ is 
+\begin_inset Formula $0,1,2,\dots$
+\end_inset
+
+,
+ is the number of years since the start of the data set in 1987.
+ Linear is 
+\begin_inset Formula $p=1$
+\end_inset
+
+ and quadratic is 
+\begin_inset Formula $p=2$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Enumerate
@@ -581,61 +604,6 @@ How well do the two specifications fit the historical data?
  How much do their predictions differ?
  Would you trust either of them,
  and why?
-\end_layout
-
-\begin_layout Standard
-
-\bar under
-Hint I
-\bar default
-:
- Be careful with the 
-\emph on
-scaling
-\emph default
- of the regressor.
- If you use the year itself,
- then 
-\begin_inset Formula $t^{2}$
-\end_inset
-
- is of the order 
-\begin_inset Formula $4\cdot10^{6}$
-\end_inset
-
- while 
-\begin_inset Formula $t^{0}=1$
-\end_inset
-
-,
- and the optimizer will fail.
- Measuring time as 
-\emph on
-years since 1987
-\emph default
- solves the problem.
- It is worth running it both ways to see what happens.
-\end_layout
-
-\begin_layout Standard
-
-\bar under
-Hint II
-\bar default
-:
- You can evaluate a polynomial with 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\backslash
-lstinline{np.polyval}
-\end_layout
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Subsection
