@@ -1,0 +1,2080 @@
+#LyX 2.5 created this file. For more info see https://www.lyx.org/
+\lyxformat 643
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\date{}
+% code
+\usepackage{xcolor}
+\usepackage{listings}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{background}{HTML}{F5F5F5}
+\definecolor{keyword}{HTML}{4B69C6}
+\definecolor{string}{HTML}{448C27}
+\definecolor{comment}{HTML}{448C27}
+\usepackage{inconsolata}
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{comment},
+    keywordstyle=\color{keyword},
+    stringstyle=\color{string},
+    basicstyle=\ttfamily,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbersep=10pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4,
+	showlines=true
+}
+\lstset{style=mystyle}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\float_alignment class
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification default
+\crossref_package prettyref
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\backgroundcolor none
+\fontcolor none
+\notefontcolor lightgray
+\boxbgcolor red
+\table_border_color default
+\table_odd_row_color default
+\table_even_row_color default
+\table_alt_row_colors_start 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2.5cm
+\rightmargin 3cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\docbook_mathml_version 0
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\shape smallcaps
+\size largest
+Project 2:
+ Model Analysis Project
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+vspace{-10mm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Vision:
+
+\series default
+ 
+\emph on
+Programming is more than writing code
+\emph default
+.
+ The ultimate goal of the projects in this course is that you learn to structure a programming project from start to finish.
+ Your answers should of course be correct,
+ but your code should also be well-structured and documented.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Objectives:
+
+\series default
+ In your model analysis project,
+ you should show that you can
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Apply numerical model analysis methods (optimization,
+ root-finding,
+ etc.)
+\end_layout
+
+\begin_layout Enumerate
+Present results in text form and in easy-to-understand figures
+\end_layout
+
+\begin_layout Enumerate
+Teach yourself new functionality in a package you already know
+\end_layout
+
+\begin_layout Enumerate
+Structure a code project
+\end_layout
+
+\begin_layout Enumerate
+Document code
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Structure:
+
+\series default
+ Your model analysis project should consist of
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+A single self-contained notebook (.ipynb) presenting the analysis
+\end_layout
+
+\begin_layout Enumerate
+Documented Python module files (.py)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Starting point:
+
+\series default
+ Use the files 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{Consumer.py}
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{Government.py}
+\end_layout
+
+\end_inset
+
+.
+ Everything except the methods marked with 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{pass}
+\end_layout
+
+\end_inset
+
+ is written for you.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example of structure:
+
+\series default
+ See this 
+\begin_inset CommandInset href
+LatexCommand href
+name "repository"
+target "https://github.com/NumEconCopenhagen/numeconcopenhagen-projects-2025-ProgEcon-example"
+literal "false"
+
+\end_inset
+
+ and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{ProgEcon-lectures/08_DataProject/01_Structure/}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Hand-in:
+
+\series default
+ Upload in Absalon
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Deadline:
+
+\series default
+ See 
+\begin_inset CommandInset href
+LatexCommand href
+name "Calendar"
+target "https://sites.google.com/view/numeconcph-progecon/calendar"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Feedback:
+
+\series default
+ Your TA will provide feedback on your project.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Exam:
+
+\series default
+ Your model analysis project will be a part of your exam portfolio.
+\begin_inset Newline newline
+\end_inset
+
+You can incorporate feedback before handing in the final version.
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+This first version does not need to be perfect!
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+A consumer with two nests
+\end_layout
+
+\begin_layout Standard
+A consumer buys three goods in quantities 
+\begin_inset Formula $x_{1},x_{2},x_{3}\geq0$
+\end_inset
+
+ at prices 
+\begin_inset Formula $p_{1},p_{2},p_{3}>0$
+\end_inset
+
+,
+ and has income 
+\begin_inset Formula $I>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Goods 2 and 3 belong together in a 
+\series bold
+nest
+\series default
+,
+ while good 1 is on its own.
+ Say good 1 is 
+\series bold
+food
+\series default
+,
+ and goods 2 and 3 are 
+\series bold
+bus trips
+\series default
+ and 
+\series bold
+train trips
+\series default
+.
+ Bus and train are both ways of travelling,
+ so they are much more like each other than either of them is like food.
+ That is all the nest says.
+\end_layout
+
+\begin_layout Standard
+First the two travel goods are combined into a 
+\series bold
+travel composite
+\series default
+ 
+\begin_inset Formula 
+\begin{equation}
+x_{B}=\left[\beta x^{\rho_{B}}_{2}+(1-\beta)x^{\rho_{B}}_{3}\right]^{\frac{1}{\rho_{B}}},\label{eq:x_B}
+\end{equation}
+
+\end_inset
+
+ and then food and travel are combined into utility,
+ 
+\begin_inset Formula 
+\begin{equation}
+u(x_{1},x_{2},x_{3})=\left[\alpha x^{\rho_{A}}_{1}+(1-\alpha)x^{\rho_{A}}_{B}\right]^{\frac{1}{\rho_{A}}},\label{eq:u}
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $\alpha\in(0,1)$
+\end_inset
+
+ is the weight on food and 
+\begin_inset Formula $\beta\in(0,1)$
+\end_inset
+
+ is the weight on the bus.
+\end_layout
+
+\begin_layout Standard
+The two exponents are 
+\begin_inset Formula $\rho_{A}=1-\frac{1}{\sigma_{A}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\rho_{B}=1-\frac{1}{\sigma_{B}}$
+\end_inset
+
+,
+ where 
+\begin_inset Formula $\sigma_{A}>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{B}>0$
+\end_inset
+
+ say how easily the consumer can 
+\series bold
+substitute
+\series default
+ one good for the other:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma_{B}<1$
+\end_inset
+
+:
+ bus and train are 
+\series bold
+complements
+\series default
+.
+ The consumer wants both,
+ and cannot get far by replacing one with the other.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\sigma_{B}>1$
+\end_inset
+
+:
+ bus and train are 
+\series bold
+substitutes
+\series default
+.
+ Either one will do,
+ so the consumer mostly buys whichever is cheaper.
+\end_layout
+
+\begin_layout Standard
+and the same for 
+\begin_inset Formula $\sigma_{A}$
+\end_inset
+
+,
+ between food and travel.
+ We always use 
+\begin_inset Formula $\sigma\neq1$
+\end_inset
+
+,
+ so that 
+\begin_inset Formula $\rho\neq0$
+\end_inset
+
+ and you never divide by zero in the exponent.
+\end_layout
+
+\begin_layout Subsection
+The problem in nested budget shares
+\end_layout
+
+\begin_layout Standard
+Rather than in quantities,
+ we write the problem in 
+\series bold
+budget shares
+\series default
+,
+ 
+\begin_inset Formula $s_{j}=\frac{p_{j}x_{j}}{I}$
+\end_inset
+
+,
+ so that 
+\begin_inset Formula $x_{j}=\frac{s_{j}I}{p_{j}}$
+\end_inset
+
+.
+ Utility is increasing in all three goods,
+ so the consumer never throws money away and spends everything,
+ 
+\begin_inset Formula $s_{1}+s_{2}+s_{3}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We now describe the choice in the 
+\series bold
+same two steps as the nests
+\series default
+:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $s_{1}\in[0,1]$
+\end_inset
+
+:
+ the share of income spent on 
+\series bold
+food
+\series default
+.
+ That leaves the share 
+\begin_inset Formula $1-s_{1}$
+\end_inset
+
+ for travel.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $w\in[0,1]$
+\end_inset
+
+:
+ the share of the 
+\series bold
+travel budget
+\series default
+ spent on the 
+\series bold
+bus
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+The three budget shares then follow as 
+\begin_inset Formula 
+\begin{equation}
+s_{1},\qquad s_{2}=\left(1-s_{1}\right)w,\qquad s_{3}=\left(1-s_{1}\right)\left(1-w\right),\label{eq:nested}
+\end{equation}
+
+\end_inset
+
+ and the quantities as 
+\begin_inset Formula $x_{j}=\frac{s_{j}I}{p_{j}}$
+\end_inset
+
+.
+ The problem is 
+\begin_inset Formula 
+\begin{equation}
+V=\max_{s_{1}\in\left[0,1\right],\,w\in\left[0,1\right]}\,u\left(\frac{s_{1}I}{p_{1}},\frac{\left(1-s_{1}\right)wI}{p_{2}},\frac{\left(1-s_{1}\right)\left(1-w\right)I}{p_{3}}\right).\label{eq:V}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We call 
+\begin_inset Formula $\left(s_{1},w\right)$
+\end_inset
+
+ the 
+\series bold
+nested budget shares
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+This is the reparametrization from section 6.4 of the optimization lecture.
+ Whatever 
+\begin_inset Formula $\left(s_{1},w\right)$
+\end_inset
+
+ you pick,
+ the three shares in eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:nested"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+ sum to one,
+ so the budget constraint holds 
+\emph on
+exactly
+\emph default
+.
+ The constraint set is therefore the box 
+\begin_inset Formula $\left[0,1\right]\times\left[0,1\right]$
+\end_inset
+
+ -- and a box is precisely what 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{L-BFGS-B}
+\end_layout
+
+\end_inset
+
+ takes as its 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{bounds}
+\end_layout
+
+\end_inset
+
+.
+ No penalties and no constraint handling of any kind are needed anywhere in this project.
+\end_layout
+
+\begin_layout Subsection
+Calibration
+\end_layout
+
+\begin_layout Standard
+Every question below should be answered for 
+\series bold
+two calibrations
+\series default
+,
+ which differ only in 
+\begin_inset Formula $\sigma_{B}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="4">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parameter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Symbol
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Complements
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Substitutes
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Weight on food
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.60
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.60
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Weight on the bus
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.50
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Substitution,
+ food vs.
+ travel
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{A}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.80
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.80
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Substitution,
+ bus vs.
+ train
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sigma_{B}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+0.40
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+3.00
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Price of food
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Price of a bus trip
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Price of a train trip
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.5
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Income
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $I$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Hint
+\bar default
+:
+ Write your code so that running everything again for the second calibration costs you 
+\emph on
+one extra line
+\emph default
+,
+ not a second copy of the code.
+ In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{Consumer.py}
+\end_layout
+
+\end_inset
+
+ a consumer is created with 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{model = ConsumerClass(par={'sigma_B':3.0})}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+How do you know your answer is right?
+\end_layout
+
+\begin_layout Standard
+There is 
+\series bold
+no formula
+\series default
+ for the solution of this model,
+ so you cannot look the answer up.
+ Two cheap checks:
+\end_layout
+
+\begin_layout Enumerate
+Is the answer 
+\series bold
+possible
+\series default
+?
+ All three shares should be strictly between 0 and 1 and sum to one,
+ and all three quantities should be positive.
+\end_layout
+
+\begin_layout Enumerate
+Do 
+\series bold
+two different methods
+\series default
+ agree?
+ In section 2 you solve the same problem twice.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Solving the model numerically
+\end_layout
+
+\begin_layout Standard
+We solve eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:V"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+ twice,
+ in two very different ways.
+\end_layout
+
+\begin_layout Subsection
+A two-dimensional grid search
+\end_layout
+
+\begin_layout Standard
+The idea is the one from the optimization lecture:
+ lay a grid over everything the consumer can afford,
+ compute utility in every point,
+ and keep the best one.
+ Nothing clever happens -- and that is the point.
+\end_layout
+
+\begin_layout Enumerate
+Make a grid of 
+\begin_inset Formula $N$
+\end_inset
+
+ values of 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $N$
+\end_inset
+
+ values of 
+\begin_inset Formula $w$
+\end_inset
+
+,
+ both from 0 to 1,
+ compute utility in every combination,
+ and keep the best point.
+ Implement it as 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{solve_grid()}
+\end_layout
+
+\end_inset
+
+.
+ Report both 
+\begin_inset Formula $\left(s_{1},w\right)$
+\end_inset
+
+ and the three budget shares it implies.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\bar under
+Hint
+\bar default
+:
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{np.meshgrid(s1_vec,w_vec,indexing='ij')}
+\end_layout
+
+\end_inset
+
+ builds the grid,
+ and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{np.argmax}
+\end_layout
+
+\end_inset
+
+ together with 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{np.unravel_index}
+\end_layout
+
+\end_inset
+
+ finds the best point.
+ Note that there is nothing to mask out and no 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{np.nan}
+\end_layout
+
+\end_inset
+
+ anywhere:
+ every point of the square is a possible choice.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Plot utility over the nested shares 
+\series bold
+in 3D
+\series default
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{ax = fig.add_subplot(1,2,1,projection='3d')}
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{ax.plot_surface}
+\end_layout
+
+\end_inset
+
+) and as a 
+\series bold
+contour plot
+\series default
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{ax.contourf}
+\end_layout
+
+\end_inset
+
+),
+ with the solution marked.
+\end_layout
+
+\begin_layout Enumerate
+Try 
+\begin_inset Formula $N=50,100,500$
+\end_inset
+
+ and 
+\begin_inset Formula $1000$
+\end_inset
+
+.
+ How much does the answer move when you add points,
+ and how many evaluations of 
+\begin_inset Formula $u$
+\end_inset
+
+ does it cost?
+ Does it improve 
+\emph on
+smoothly
+\emph default
+?
+\end_layout
+
+\begin_layout Enumerate
+Compare the two calibrations.
+ Where is the surface steep,
+ and where is it flat?
+ Which of the two would you expect to be harder for an optimizer?
+\end_layout
+
+\begin_layout Subsection
+L-BFGS-B
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{L-BFGS-B}
+\end_layout
+
+\end_inset
+
+ is the workhorse for smooth problems with several variables and simple bounds.
+ The 
+\series bold
+B
+\series default
+ stands for 
+\emph on
+bounds
+\emph default
+:
+ it takes a box around each variable,
+ but it does 
+\emph on
+not
+\emph default
+ take general constraints.
+ Because we wrote the problem in nested budget shares,
+ a box is all we need -- the whole of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{solve()}
+\end_layout
+
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{minimize(self.objective,s0,method='L-BFGS-B',bounds=((0,1),(0,1)))}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{objective()}
+\end_layout
+
+\end_inset
+
+ is just 
+\begin_inset Formula $-u$
+\end_inset
+
+.
+ There is nothing else to arrange.
+\end_layout
+
+\begin_layout Enumerate
+Solve the problem this way and implement it as 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{solve()}
+\end_layout
+
+\end_inset
+
+.
+ Compare the solution,
+ the number of function evaluations and the running time with the grid search.
+ Do the two methods agree?
+\end_layout
+
+\begin_layout Enumerate
+Record the 
+\series bold
+convergence path
+\series default
+ with the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{callback}
+\end_layout
+
+\end_inset
+
+ argument of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{optimize.minimize}
+\end_layout
+
+\end_inset
+
+,
+ and draw it on top of the contour plot from section 2.1.
+ Then plot how far each iteration is from the point the solver ends at,
+ against the iteration number,
+ on a 
+\series bold
+log scale
+\series default
+.
+ Where does the method make fast progress,
+ and where is it slow?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\bar under
+Hint
+\bar default
+:
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{callback=lambda sk:
+ path.append(sk.copy())}
+\end_layout
+
+\end_inset
+
+.
+ The 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{.copy()}
+\end_layout
+
+\end_inset
+
+ is not optional -- without it you get the same point repeated.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Solve from at least six different starting points,
+ including the middle 
+\begin_inset Formula $\left(\frac{1}{2},\frac{1}{2}\right)$
+\end_inset
+
+ and all four 
+\series bold
+corners
+\series default
+ of the square.
+ Do you always get the same answer?
+ Does the number of iterations change?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+One corner fails in 
+\emph on
+one
+\emph default
+ of the two calibrations,
+ and reports 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{success = True}
+\end_layout
+
+\end_inset
+
+ while doing so.
+ Find it,
+ and describe what happens there.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Vary the settings below -- they all go in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{options={...}}
+\end_layout
+
+\end_inset
+
+ -- and report the two shares,
+ the utility reached and the number of function evaluations for each of them in one table:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{ftol}
+\end_layout
+
+\end_inset
+
+ (stop when the objective stops changing):
+ 
+\begin_inset Formula $10^{-4},10^{-8},10^{-12},10^{-16}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{gtol}
+\end_layout
+
+\end_inset
+
+ (stop when the gradient is small):
+ 
+\begin_inset Formula $10^{-2},10^{-5},10^{-8},10^{-12}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Which settings would you use?
+ Note that you can rank them 
+\emph on
+without
+\emph default
+ knowing the true answer:
+ we are maximizing,
+ so a 
+\series bold
+higher utility is a better answer
+\series default
+.
+ Why is a tighter tolerance not always a better answer?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Relative prices and demand
+\end_layout
+
+\begin_layout Standard
+We now use the model.
+ Train tickets get more expensive,
+ and we ask what the consumer does.
+\end_layout
+
+\begin_layout Enumerate
+Solve the model for 
+\begin_inset Formula $p_{3}$
+\end_inset
+
+ from 
+\begin_inset Formula $0.5$
+\end_inset
+
+ to 
+\begin_inset Formula $3.0$
+\end_inset
+
+,
+ holding 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+,
+ 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $I$
+\end_inset
+
+ fixed,
+ and plot the three 
+\series bold
+budget shares
+\series default
+ and the three 
+\series bold
+quantities
+\series default
+.
+ Do it for both calibrations,
+ ideally in the same figure.
+\end_layout
+
+\begin_layout Enumerate
+In which calibration does a higher 
+\begin_inset Formula $p_{3}$
+\end_inset
+
+ 
+\series bold
+raise
+\series default
+ the budget share of the train,
+ and in which does it 
+\series bold
+lower
+\series default
+ it?
+\end_layout
+
+\begin_layout Enumerate
+What happens to the number of 
+\series bold
+bus
+\series default
+ trips when train tickets get more expensive?
+ Describe how the two calibrations differ.
+\end_layout
+
+\begin_layout Enumerate
+How much does the price of a train ticket change the demand for 
+\series bold
+food
+\series default
+?
+ Compare with the effect on bus trips.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Lump-sum taxes and product taxes
+\end_layout
+
+\begin_layout Standard
+The government needs revenue,
+ and has two kinds of instrument:
+\end_layout
+
+\begin_layout Itemize
+a 
+\series bold
+lump-sum tax
+\series default
+ 
+\begin_inset Formula $T$
+\end_inset
+
+,
+ which reduces income to 
+\begin_inset Formula $I-T$
+\end_inset
+
+ and raises the revenue 
+\begin_inset Formula $T$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+product taxes
+\series default
+ 
+\begin_inset Formula $\tau_{j}\geq0$
+\end_inset
+
+,
+ which raise the price of good 
+\begin_inset Formula $j$
+\end_inset
+
+ from 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+ to 
+\begin_inset Formula $\left(1+\tau_{j}\right)p_{j}$
+\end_inset
+
+ and raise the revenue 
+\begin_inset Formula $\tau_{j}p_{j}x_{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Total tax revenue is 
+\begin_inset Formula 
+\begin{equation}
+R=T+\sum^{3}_{j=1}\tau_{j}p_{j}x^{\star}_{j},\label{eq:R}
+\end{equation}
+
+\end_inset
+
+ where 
+\begin_inset Formula $x^{\star}_{j}$
+\end_inset
+
+ is what the consumer buys 
+\series bold
+given the taxes
+\series default
+.
+ The consumer gets nothing back:
+ the revenue leaves the model.
+\end_layout
+
+\begin_layout Standard
+We compare the instruments in the simplest possible way.
+ Two taxes that raise 
+\series bold
+the same revenue
+\series default
+ are compared by the 
+\series bold
+utility
+\series default
+ the consumer is left with.
+ Higher is better.
+\end_layout
+
+\begin_layout Standard
+Use 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{GovernmentClass}
+\end_layout
+
+\end_inset
+
+ in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{Government.py}
+\end_layout
+
+\end_inset
+
+.
+ Its 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{set_taxes()}
+\end_layout
+
+\end_inset
+
+ translates the taxes into the prices and the income the consumer faces,
+ so everything you wrote in sections 1-3 keeps working unchanged.
+\end_layout
+
+\begin_layout Enumerate
+Implement 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{tax_revenue()}
+\end_layout
+
+\end_inset
+
+ (eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:R"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Consider five product taxes:
+ on food only,
+ on the bus only,
+ on the train only,
+ the same rate on bus and train,
+ and the same rate on all three goods.
+ For each of them,
+ plot the revenue as a function of the tax rate for rates from 0 to 3,
+ one panel per calibration.
+\end_layout
+
+\begin_layout Enumerate
+Which of the curves have a 
+\series bold
+top
+\series default
+,
+ and which just keep rising?
+ Find the revenue-maximizing rate and the largest possible revenue where there is a top.
+ In particular:
+ what is the most that a tax on train tickets alone can 
+\emph on
+ever
+\emph default
+ raise in the substitutes calibration?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\bar under
+Hint
+\bar default
+:
+ Use a grid over the tax rate and pick the best point,
+ exactly as in section 2.1.
+ Read off your figure from question 2 how far out the grid has to go.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Plot the consumer's utility 
+\series bold
+against the revenue raised
+\series default
+,
+ for all five product taxes and for the lump-sum tax,
+ one panel per calibration.
+ Which instrument is the cheapest way to raise a given revenue,
+ and does the ranking depend on the calibration?
+\end_layout
+
+\begin_layout Enumerate
+Let the government need 
+\begin_inset Formula $R=0.20$
+\end_inset
+
+,
+ i.e.
+ 2 percent of income.
+ Use a root-finder to find the tax rate that raises exactly that for each instrument,
+ and report the rate and the resulting utility in one table per calibration.
+ Rank the instruments,
+ and comment in particular on the tax on train tickets.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\bar under
+Hint
+\bar default
+:
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{optimize.root_scalar(f,bracket=[...],method='brentq')}
+\end_layout
+
+\end_inset
+
+ where 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{f}
+\end_layout
+
+\end_inset
+
+ is the revenue minus the target.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Extension
+\end_layout
+
+\begin_layout Standard
+Extend the model in 
+\series bold
+one
+\series default
+ direction of your own choice,
+ solve it,
+ and describe the results.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\bar under
+Note
+\bar default
+:
+ This is intended as an open question,
+ and we encourage you to be creative.
+\end_layout
+
+\end_body
+\end_document
