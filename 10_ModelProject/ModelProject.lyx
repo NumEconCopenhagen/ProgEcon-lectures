@@ -689,11 +689,15 @@ Every question below should be answered for
 two calibrations
 \series default
 ,
- which differ only in 
+ where 
 \begin_inset Formula $\sigma_{B}$
 \end_inset
 
-:
+ differs:
+\begin_inset VSpace bigskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1087,6 +1091,9 @@ Income
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
 
 \bar under
 Hint
@@ -1117,7 +1124,7 @@ status open
 \begin_layout Plain Layout
 
 \backslash
-lstinline{model = ConsumerClass(par={'sigma_B':3.0})}
+lstinline!model = ConsumerClass(par={'sigma_B':3.0})!
 \end_layout
 
 \end_inset
@@ -1533,6 +1540,56 @@ Hint
 \bar default
 :
  
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{optimize.minimize}
+\end_layout
+
+\end_inset
+
+ calls the function you give it as 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{callback}
+\end_layout
+
+\end_inset
+
+ once per iteration,
+ with the current point as its only argument.
+ That is the only way to see the path:
+ the result object holds the point the solver stopped at,
+ and nothing about how it got there.
+ Note that an iteration is not a function evaluation -- the solver computes 
+\begin_inset Formula $u$
+\end_inset
+
+ several times per iteration,
+ for the gradient and for the line search,
+ and the callback fires only for the steps it actually takes.
+ It is not called for the starting point either,
+ so put 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lstinline{s0}
+\end_layout
+
+\end_inset
+
+ in the list yourself before you call the solver.
+ Use 
 \begin_inset ERT
 status open
 

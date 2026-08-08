@@ -836,6 +836,9 @@ Hint
 \bar default
 :
  Set up a random number generator with 
+\end_layout
+
+\begin_layout Quote
 \begin_inset ERT
 status open
 
@@ -847,7 +850,14 @@ lstinline{rng = np.random.default_rng(seed)}
 
 \end_inset
 
- and draw the shock with 
+ 
+\end_layout
+
+\begin_layout Standard
+and draw the shock with 
+\end_layout
+
+\begin_layout Quote
 \begin_inset ERT
 status open
 
@@ -861,8 +871,14 @@ lstinline{psi = rng.lognormal(-0.5*sigma_psi**2,
 
 \end_inset
 
-.
- This is the same as 
+
+\end_layout
+
+\begin_layout Standard
+This is the same as 
+\end_layout
+
+\begin_layout Quote
 \begin_inset ERT
 status open
 
@@ -876,7 +892,11 @@ lstinline{psi = np.exp(rng.normal(-0.5*sigma_psi**2,
 
 \end_inset
 
- -- note that the two arguments are the mean and the standard deviation of the 
+
+\end_layout
+
+\begin_layout Standard
+Note that the two arguments are the mean and the standard deviation of the 
 \emph on
 underlying normal
 \emph default
@@ -949,6 +969,12 @@ previous
 
 \series bold
 Parameters.
+\series default
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
