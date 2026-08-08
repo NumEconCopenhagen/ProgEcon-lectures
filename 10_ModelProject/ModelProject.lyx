@@ -1558,7 +1558,9 @@ lstinline{.copy()}
 
 \end_inset
 
- is not optional -- without it you get the same point repeated.
+ is defensive:
+ if the solver reused one array and overwrote it,
+ you would get the same point repeated.
 \end_layout
 
 \end_deeper
@@ -1610,7 +1612,7 @@ status open
 \begin_layout Plain Layout
 
 \backslash
-lstinline{options={...}}
+lstinline!options={...}!
 \end_layout
 
 \end_inset
