@@ -505,6 +505,7 @@ quadratic
 \series default
  trend to the Gini coefficient,
  and use them to predict inequality in 2030 and 2040.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -533,15 +534,20 @@ where
 \end_inset
 
  and where 
-\begin_inset Formula $t_{i}$
-\end_inset
-
- is 
-\begin_inset Formula $0,1,2,\dots$
+\begin_inset Formula $t_{i}\in0,1,2,\dots$
 \end_inset
 
 ,
  is the number of years since the start of the data set in 1987.
+ The prediction for year 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is 
+\begin_inset Formula $\sum^{p}_{k=0}\beta_{k}\tau^{k}$
+\end_inset
+
+.
  Linear is 
 \begin_inset Formula $p=1$
 \end_inset
@@ -551,6 +557,7 @@ where
 \end_inset
 
 .
+ 
 \end_layout
 
 \begin_layout Enumerate
