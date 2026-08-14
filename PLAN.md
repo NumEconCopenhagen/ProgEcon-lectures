@@ -1,81 +1,86 @@
-﻿# Course plan
+# Course Plan — Autumn 2026
 
-**Time and place**
+## Time and Place
 
-* **Lectures:** 9:00-11:00 (Chr. Hansen)
-* **Classes:** 13:00-16:00
+- **Lectures:** Wednesdays, 15:00–17:00, CSS 34-0-01, Chr. Hansen Auditorium
+- **Exercise Classes:** Three-hour sessions. See your assigned class in Absalon for the time and room.
+- **Autumn Break:** Week 42 — no teaching.
+- **September 9:** No in-person lecture. Complete the structured self-study, Problem Set 0, and the assigned DataCamp material.
 
-**Notebooks**
+## Course Material
 
-* **Lectures:** [NumEconCopenhagen/ProgEcon-lectures](https://github.com/NumEconCopenhagen/ProgEcon-lectures) ([download](https://github.com/NumEconCopenhagen/ProgEcon-lectures/archive/refs/heads/main.zip))
-* **Exercises:** [NumEconCopenhagen/ProgEcon-exercises](https://github.com/NumEconCopenhagen/ProgEcon-exercises) ([download](https://github.com/NumEconCopenhagen/ProgEcon-exercises/archive/refs/heads/main.zip))
+- **Lectures:** [ProgEcon-lectures](https://github.com/NumEconCopenhagen/ProgEcon-lectures/tree/autumn_26)
+- **Exercises:** [ProgEcon-exercises](https://github.com/NumEconCopenhagen/ProgEcon-exercises/tree/autumn_26)
+- **Announcements and supplementary material:** Absalon.
 
-Raw recordings of the lectures are available on Absalon. 
+The lecture and exercise repositories use the same weekly numbering. For example, the material for the first full Python week is in `02_Python_Basics_I` in both repositories.
 
-(Screencasts from previous course can be seen [here](https://www.youtube.com/@numeconcph/courses))
+## Lectures
 
-## Schedule
-
-### Week 1 (August 3-7)
-
-| Date | Lecture (9:00-11:00) | Exercises (13:00-16:00) |
+| Week | Date | Material |
 | --- | --- | --- |
-| Mon, Aug 3 | Lecture 1: Introduction | Problem set 0: Getting started (follow the [installation guide](https://sites.google.com/view/numeconcph-progecon/content) and run some code from the lectures) + DataCamp |
-| Tue, Aug 4 | Lecture 2: Python basics | Problem set 0: Getting started + DataCamp |
-| Wed, Aug 5 | Lecture 3: Classes and Numpy | Problem set 0: Getting started + DataCamp |
-| Thu, Aug 6 | Lecture 4: Printing and Plotting | Problem set 1: Printing and Plotting |
-| Fri, Aug 7 | Lecture 5: Optimization and Root-finding | Problem set 2: Optimization |
+| 36 | Wed, Sep 2 | **01: Introduction** |
+| 37 | Wed, Sep 9 | **No In-Person Lecture:** Getting Started, DataCamp, and structured self-study |
+| 38 | Wed, Sep 16 | **02: Python Basics I** — variables, types, containers, conditionals, and loops |
+| 39 | Wed, Sep 23 | **03: Python Basics II** — functions, methods, scope, copies, and floating-point numbers |
+| 40 | Wed, Sep 30 | **04: Classes and NumPy** |
+| 41 | Wed, Oct 7 | **05: Printing and Plotting** |
+| 42 | Wed, Oct 14 | *Autumn Break* |
+| 43 | Wed, Oct 21 | **06: Optimization** |
+| 44 | Wed, Oct 28 | **07: Root-Finding** |
+| 45 | Wed, Nov 4 | **08: Random Numbers and Simulation** |
+| 46 | Wed, Nov 11 | **09: Descriptive Economics I** |
+| 47 | Wed, Nov 18 | **10: Descriptive Economics II and Data Project** |
+| 48 | Wed, Nov 25 | **11: Solow Model** |
+| 49 | Wed, Dec 2 | **12: Exchange Economy, Model Project, and Calibration** |
+| 50 | Wed, Dec 9 | **13: Exam Preparation** |
 
-### Week 2 (August 10-14)
+## Exercise Classes
 
-| Date | Lecture (9:00-11:00) | Exercises (13:00-16:00) |
-| --- | --- | --- |
-| Mon, Aug 10 | Lecture 6: Random numbers | Problem set 3: Random numbers |
-| Tue, Aug 11 | Lecture 7: Descriptive Economics I | Problem set 4: Descriptive Economics I |
-| Wed, Aug 12 | Lecture 8: Descriptive Economics II | Problem set 5: Descriptive Economics II + data project |
-| Thu, Aug 13 | *no lecture* | Data project + introduction to git + recap |
-| Fri, Aug 14 | *no lecture* | Data project + introduction to git + recap |
+Exercise classes run in Weeks 37–41 and 43–51. The folders in the exercise repository follow the lecture numbering, while the problem sets retain their Autumn 2026 numbers.
 
-### Week 3 (August 17-21)
-
-| Date | Lecture (9:00-11:00) | Exercises (13:00-16:00) |
-| --- | --- | --- |
-| Mon, Aug 17 | Lecture 9: Solow | Problem set 6: Solow |
-| Tue, Aug 18 | Lecture 10: Walras | Problem set 7: Walras + feedback on data project |
-| Wed, Aug 19 | *no lecture* | Model project |
-| Thu, Aug 20 | *no lecture* | *no exercises* |
-| Fri, Aug 21 | Lecture 11: Recap and exam | Model project + recap + exam preparation |
-
-**Changes relative to the original plan**
-
-* Lecture 9 (Solow) is postponed by one day; the exercise class on Aug 14 is used for the data project.
-* Lectures 11-13 (AS-AD, Calibration, Dynamic Programming) are cancelled.
-* Lecture 14 covers recap and the exam only.
-* Problem set 8 (AS-AD) is cancelled.
-
-The notebooks remain in the repository as appendices/extra material. Videoes from last year is availiable on Absalon.
+| Week | Main Class Activities |
+| --- | --- |
+| 37 | **Problem Set 0: Getting Started** and DataCamp |
+| 38 | **Problem Set 0: Getting Started**, coding practice, and DataCamp |
+| 39 | **Problem Set 1: Python Basics I** and DataCamp |
+| 40 | **Problem Set 2: Python Basics II** and DataCamp |
+| 41 | **Problem Set 3: Classes and NumPy** and DataCamp |
+| 42 | *Autumn Break* |
+| 43 | **Problem Set 4: Printing and Plotting** and final DataCamp work |
+| 44 | **Problem Set 5: Optimization** |
+| 45 | **Problem Set 6: Root-Finding** |
+| 46 | **Problem Set 7: Random Numbers and Simulation** |
+| 47 | **Problem Set 8: Descriptive Economics I** |
+| 48 | **Problem Set 9: Descriptive Economics II** and data-project workshop |
+| 49 | **Problem Set 10: Solow Model** and data-project questions |
+| 50 | **Problem Set 11: Walras / Exchange Economy** and model-project workshop |
+| 51 | **Model Project Workshop, Recap, and Exam Preparation** |
 
 ## DataCamp
 
-**Deadline: Completed by Aug 9, 23:59.**
+Complete the assigned chapters continuously. All deadlines are at 23:59.
 
-Required courses:
+| Deadline | Required Progress |
+| --- | --- |
+| Sun, Sep 13 | **Introduction to Python:** Chapters 1–2 completed |
+| Sun, Sep 20 | **Introduction to Python:** Chapter 3 completed |
+| Sun, Sep 27 | **Introduction to Python:** Chapter 4 completed — course completed |
+| Sun, Oct 4 | **Intermediate Python:** Chapters 1–2 completed |
+| Sun, Oct 11 | **Intermediate Python:** Chapters 3–4 completed |
+| Sun, Oct 25 | **Intermediate Python:** Chapter 5 completed — course completed |
 
-1. Introduction to Python
-2. Intermediate Python
+Optional practice: Introduction to Functions in Python, Introduction to NumPy, and Intermediate Object-Oriented Programming in Python.
 
-Optional courses:
+## Projects and Exam
 
-1. Introduction to Functions in Python
-2. Introduction to NumPy
-3. Intermediate Object-Oriented Programming in Python (chapter: *Overloading and Multiple Inheritance*)
+There are two mandatory projects: a data analysis project and a model analysis project. Projects and the exam may be completed individually or in groups of up to four students, including groups across exercise classes.
 
-## Projects and exam
-
-Projects and exams can be written in **groups of up to 4 persons**.
-
-| | Hand-in | Feedback |
+| Activity | Deadline | Feedback |
 | --- | --- | --- |
-| Project 1: Data project | Aug 16, 23:59 | Aug 18 |
-| Project 2: Model project | Aug 23, 23:59 | Aug 25 |
-| Exam | Aug 28 9:00  to Aug 30 (see more [here](https://sites.google.com/view/numeconcph-progecon/exam)) |
+| DataCamp | According to the intermediate deadlines | |
+| Data Project | Sun, Nov 29, 23:59 | Before the end of teaching |
+| Model Project | Sun, Dec 13, 23:59 | Before the exam |
+| Exam | See Digital Exam | |
+
+The data and model projects may be revised using feedback received during the semester before portfolio submission.
