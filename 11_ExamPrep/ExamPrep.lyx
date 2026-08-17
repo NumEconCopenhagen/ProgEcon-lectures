@@ -300,14 +300,14 @@ Summarize and visualize empirical data
 \begin_inset Formula $\text{\ensuremath{\Rightarrow}}$
 \end_inset
 
- gain flexibility and automation compared to Excel
+ build upon Descriptive Economics
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula $\text{\ensuremath{\Rightarrow}}$
 \end_inset
 
- build upon Descriptive Economics
+ gain flexibility and automation compared to Excel
 \end_layout
 
 \begin_layout Standard
@@ -433,7 +433,8 @@ Data
  online data,
  descriptive economics,
  structure and documentation,
- workflow and debugging)
+ workflow and debugging,
+ git)
 \end_layout
 
 \begin_layout Itemize
@@ -442,8 +443,7 @@ Data
 Models
 \series default
  (Solow,
- Walras,
- git)
+ Walras)
 \end_layout
 
 \begin_layout Itemize
