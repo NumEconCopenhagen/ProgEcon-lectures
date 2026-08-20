@@ -481,7 +481,7 @@ Learning phases
 \begin_layout Enumerate
 
 \series bold
-Basics:
+Basics+Tools:
 
 \series default
  A million new concepts and syntax.
@@ -717,6 +717,40 @@ Present and discuss results of a numerical analysis of empirical data and econom
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Checklist
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+See 
+\emph on
+CHECKLIST.md
+\emph default
+ in 
+\emph on
+ProgEcon-Lectures 
+\emph default
+for details on what is meant by each learning outcome.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Exam
 \end_layout
@@ -894,9 +928,7 @@ No new packages are required,
 \begin_layout Itemize
 
 \series bold
-Exam from 2025 in ProgEcon-Lectures
-\series default
- (hard)
+Exam+Re-exam from 2025 in ProgEcon-Lectures
 \end_layout
 
 \begin_layout Itemize
@@ -1082,11 +1114,6 @@ Your exam project (in the folder 03_examproject)
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
-If you've uploaded everything to GitHub,
- you can download a zip of your repository from there (press the green 'code'-button) 
-\end_layout
-
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
