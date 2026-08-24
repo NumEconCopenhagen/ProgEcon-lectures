@@ -38,7 +38,7 @@ Finally, the course gives you are broader perspective on computational methods i
 * Use numerical optimizers and equation solvers
 * Solve economic models numerically
 * Simulate economic models
-* Calibration economic models to data
+* Calibrate economic models to data
 
 ### Competencies
 

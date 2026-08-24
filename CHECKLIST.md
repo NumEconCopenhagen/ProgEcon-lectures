@@ -162,6 +162,21 @@ do.
 - [ ] I can solve many random versions of a model and summarize them with percentiles rather than a
       single number.
 
+### Calibrate economic models to data
+ 
+*This is not required material*
+
+### Calibrate economic models to data
+ 
+*This is not required material*
+
+- [ ] I can explain what data moments or targets are being matched in a calibration.
+- [ ] I can write an objective function measuring the distance between simulated and empirical moments.
+- [ ] I can calibrate model parameters with a numerical optimizer and impose economically meaningful bounds.
+- [ ] I can check that the calibrated parameters reproduce the target moments.
+- [ ] I can interpret the calibrated parameters and explain which targets identify them.
+- [ ] I can assess sensitivity to starting values, parameter bounds and alternative targets.
+
 ---
 
 ## Competencies
