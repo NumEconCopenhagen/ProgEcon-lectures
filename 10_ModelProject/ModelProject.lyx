@@ -1638,12 +1638,12 @@ corners
 
 \begin_deeper
 \begin_layout Standard
-One corner fails in 
+Two corners fails in 
 \emph on
 one
 \emph default
  of the two calibrations,
- and reports 
+ and report 
 \begin_inset ERT
 status open
 
@@ -1656,7 +1656,7 @@ lstinline{success = True}
 \end_inset
 
  while doing so.
- Find it,
+ Find them,
  and describe what happens there.
 \end_layout
 
