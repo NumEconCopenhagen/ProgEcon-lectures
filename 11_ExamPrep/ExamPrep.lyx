@@ -1098,7 +1098,11 @@ The zip-file should contain:
 
 \begin_deeper
 \begin_layout Enumerate
-A general README.md for your portfolio 
+A general README.md for your portfolio.
+\begin_inset Newline newline
+\end_inset
+
+Including short description of who has done what for each project.
 \end_layout
 
 \begin_layout Enumerate
@@ -1114,6 +1118,20 @@ Your exam project (in the folder 03_examproject)
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+
+\series bold
+API-keys:
+
+\series default
+ Private API-keys should 
+\emph on
+not 
+\emph default
+be uploaded,
+ but it should be clear in the notebook how a user should provide their own API key in order to run the notebook
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
