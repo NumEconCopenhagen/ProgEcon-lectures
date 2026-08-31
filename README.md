@@ -2,6 +2,6 @@
 
 [Course description](DESCRIPTION.md)
 
-[Course plan](PLAN.md)
+[Course plan](PLAN_autumn26.md)
 
 [Learning checklist](CHECKLIST.md)
