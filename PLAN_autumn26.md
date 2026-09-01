@@ -32,9 +32,9 @@
 | --- | --- | --- |
 | 36 | Wed, Sep 2 | **Lecture 1: Introduction** |
 | 37 | Wed, Sep 9 | **No in-person lecture:** structured self-study, Getting Started and DataCamp |
-| 38 | Wed, Sep 16 | **Lecture 2: Python Basics I**: variables, types, containers, conditionals and loops |
-| 39 | Wed, Sep 23 | **Lecture 3: Python Basics II**: functions, methods, scope, copies and floating point |
-| 40 | Wed, Sep 30 | **Lecture 4: Classes and NumPy** |
+| 38 | Wed, Sep 16 | **Lecture 2: Python Basics I**: variables, types, containers and conditionals |
+| 39 | Wed, Sep 23 | **Lecture 3: Python Basics II**: loops, functions, methods, scope, copies and classes |
+| 40 | Wed, Sep 30 | **Lecture 4: Numbers and NumPy**: floating point numbers and numerical arrays |
 | 41 | Wed, Oct 7 | **Lecture 5: Printing and Plotting** |
 | 42 | Wed, Oct 14 | *Autumn break* |
 | 43 | Wed, Oct 21 | **Lecture 6: Optimization** |
@@ -48,13 +48,15 @@
 
 ### September 9
 
-There is no in-person lecture on September 9.
+There is no in-person lecture on September 9. Lecture 2 follows on September 16.
 
 Use the week to:
 
 1. Make sure your Python installation and course setup work.
-2. Work on Problem Set 0.
-3. Complete the assigned DataCamp chapters according to the deadlines below.
+2. Work on Problem set 1: Introduction and getting started.
+3. Complete *Introduction to Python*, Chapters 1-2, before the September 13 deadline.
+4. If you finish early, look ahead at the comparison and boolean operators in *Intermediate Python*, Chapter 3. They are
+   not required until October 4, but they make the conditionals in Lecture 2 easier.
 
 ---
 
@@ -66,23 +68,24 @@ The early classes combine small programming problem sets with DataCamp. Later cl
 
 | Week | Main class activities |
 | --- | --- |
-| 37 | **Getting started:** installation, notebooks, Problem Set 0 + DataCamp |
-| 38 | **Python foundations:** Problem Set 0, coding practice + DataCamp |
-| 39 | **Python Basics I:** small problem set + DataCamp |
-| 40 | **Python Basics II:** small problem set + DataCamp |
-| 41 | **Classes and NumPy:** small problem set + DataCamp |
+| 37 | **Problem set 1: Introduction and getting started** - installation, notebooks + DataCamp |
+| 38 | **Problem set 1** continued, coding practice + DataCamp |
+| 39 | **Problem set 2: Python Basics I** + DataCamp |
+| 40 | **Problem set 3: Python Basics II** + DataCamp |
+| 41 | **Problem set 4: Numbers and NumPy** + DataCamp |
 | 42 | *Autumn break* |
-| 43 | **Printing and Plotting** |
-| 44 | **Optimization** |
-| 45 | **Root-finding and Interpolation** |
-| 46 | **Random Numbers and Simulation** |
-| 47 | **Descriptive Economics I** |
-| 48 | **Descriptive Economics II** + data project workshop |
-| 49 | **Solow Model** + data project questions |
-| 50 | **Walras / Exchange Economy** + model project workshop |
+| 43 | **Problem set 5: Printing and Plotting** |
+| 44 | **Problem set 6: Optimization** |
+| 45 | **Problem set 7: Root-finding and Interpolation** |
+| 46 | **Problem set 8: Random Numbers and Simulation** |
+| 47 | **Problem set 9: Descriptive Economics I** |
+| 48 | **Problem set 10: Descriptive Economics II** + data project workshop |
+| 49 | **Problem set 11: Solow Model** + data project questions |
+| 50 | **Problem set 12: Exchange Economy** + model project workshop |
 | 51 | **Model project workshop + recap and exam preparation** |
 
-The exact numbering of the problem sets will be updated when the exercise repository is reorganized.
+The problem set number matches the numbered folder in the exercise repository, and both follow the lecture numbering.
+Each exercise class works on the problem set for the *previous* week's lecture.
 
 ---
 
@@ -108,6 +111,33 @@ All deadlines are at **23:59**.
 | **Sun, Oct 11** | **Intermediate Python:** Chapter 5, *Case Study: Hacker Statistics* — **course completed** |
 
 Students are expected to complete the assigned DataCamp tasks by the respective deadlines.
+
+### How DataCamp relates to the lectures
+
+The two courses play different roles.
+
+* ***Introduction to Python* is preparation.** Chapters 1-4 are due before the lecture that uses them, so you arrive
+  with the vocabulary already in place.
+* ***Intermediate Python* is consolidation.** Chapters 1-5 revisit and extend material you have already seen in the
+  lecture and the exercise class.
+
+| Lecture | Date | Related DataCamp material | Deadline | Role |
+| --- | --- | --- | --- | --- |
+| 2: Python Basics I | Sep 16 | *Introduction*, Ch. 1-2 | Sep 13 | Preparation |
+| 2: Python Basics I - conditionals | Sep 16 | *Intermediate*, Ch. 3 | Oct 4 | Consolidation |
+| 3: Python Basics II - loops, functions, scope, classes | Sep 23 | *Introduction*, Ch. 3; *Intermediate*, Ch. 4 | Sep 20 | Preparation |
+| 4: Numbers and NumPy | Sep 30 | *Introduction*, Ch. 4 | Sep 20 | Preparation |
+| 5: Printing and Plotting | Oct 7 | *Intermediate*, Ch. 1 | Sep 27 | Preparation |
+| 8: Random Numbers and Simulation | Nov 4 | *Intermediate*, Ch. 5 | Oct 11 | Preview |
+| 9-10: Descriptive Economics | Nov 11, 18 | *Intermediate*, Ch. 2 (pandas) | Sep 27 | Preview |
+
+Two consequences worth knowing in advance:
+
+* **Conditionals and loops are taught before DataCamp covers them.** Lecture 2 introduces conditionals and Lecture 3 introduces loops, both from scratch; the
+  exercise class in week 40 is where you practise them, immediately before the October 4 deadline. Do not wait for
+  DataCamp to explain them first.
+* **Pandas is covered on DataCamp in September but not lectured until November.** Plan a short refresher of
+  *Intermediate Python*, Chapter 2, before Lecture 9.
 
 ### Optional DataCamp material
 
