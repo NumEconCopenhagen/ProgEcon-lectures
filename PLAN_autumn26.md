@@ -158,12 +158,12 @@ There are two mandatory projects during the semester:
 
 Both projects must be handed in and approved.
 
-| Activity | Deadline | Feedback |
-| --- | --- | --- |
-| DataCamp | According to the intermediate deadlines above | |
-| Project 1: Data project | **Sun, Nov 29, 23:59** | Feedback before the end of teaching |
-| Project 2: Model project | **Sun, Dec 13, 23:59** | Feedback before the exam |
-| Exam | See Digital Exam | |
+| Activity | Release Date | Deadline | Feedback |
+| --- | --- | --- | --- |
+| DataCamp | | According to the intermediate deadlines above | |
+| Project 1: Data project | **Sun, Nov 8** | **Sun, Nov 29, 23:59** | Feedback before the end of teaching |
+| Project 2: Model project | **Sun, Nov 22** | **Sun, Dec 13, 23:59** | Feedback before the exam |
+| Exam | | See Digital Exam | |
 
 Projects and the exam can be completed individually or in groups of up to four students. **Groups may consist of students from different exercise classes ("holds").**
 
