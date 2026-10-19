@@ -13,10 +13,12 @@
 
 ## Time and place
 
-* **Lectures:** Wednesdays, 15:00-17:00, CSS 34-0-01, Chr. Hansen Auditorium
+* **In-person lectures:** Wednesdays, 15:00-17:00, CSS 34-0-01, Chr. Hansen Auditorium, on the dates listed below
 * **Exercise classes:** 3-hour sessions. Exact time and room depend on your assigned class.
 * **Autumn break:** Week 42, no teaching
 * **No in-person lecture on September 9:** structured self-study and DataCamp instead
+* **Second-half in-person sessions:** October 21, November 4, November 18, December 2 and December 9
+* **No in-person lectures on October 28, November 11 and November 25:** the corresponding material is covered in videos
 
 ## Course material
 
@@ -28,6 +30,19 @@
 
 ## Lectures
 
+### Format for the Second Half of the Course
+
+Following the midterm evaluation, the second half of the course combines short recorded videos with interactive in-person sessions.
+
+* **Videos before class:** Short recordings cover the lecture notebooks for two lecture weeks at a time, so you can work through the explanations and code at your own pace.
+* **Small preparation tasks:** A few short exercises accompany the videos. Watch the videos and try the tasks before the relevant in-person session.
+* **Active in-person sessions:** We work through problems together, do live coding, discuss difficult concepts and address your questions. There is also time for questions about the data and model projects.
+* **Attendance:** Bring your laptop and be ready to program. The interactive in-person sessions are **not recorded**; attendance is strongly encouraged.
+
+**October 21 is a transition session on Optimization.** No preparation using the new videos is required for this session. The **first videos will be available by Monday, October 26, at the latest**, covering Root-finding and Interpolation and Random Numbers and Simulation for the November 4 session. The remaining videos and preparation tasks will be posted ahead of the relevant sessions.
+
+### Weekly Schedule
+
 | Week | Date | Lecture |
 | --- | --- | --- |
 | 36 | Wed, Sep 2 | **Lecture 1: Introduction** |
@@ -37,14 +52,14 @@
 | 40 | Wed, Sep 30 | **Lecture 4: Numbers and NumPy**: floating point numbers and numerical arrays |
 | 41 | Wed, Oct 7 | **Lecture 5: Printing and Plotting** |
 | 42 | Wed, Oct 14 | *Autumn break* |
-| 43 | Wed, Oct 21 | **Lecture 6: Optimization** |
-| 44 | Wed, Oct 28 | **Lecture 7: Root-finding and Interpolation** |
-| 45 | Wed, Nov 4 | **Lecture 8: Random Numbers and Simulation** |
-| 46 | Wed, Nov 11 | **Lecture 9: Descriptive Economics I** |
-| 47 | Wed, Nov 18 | **Lecture 10: Descriptive Economics II** + introduction to the data project |
-| 48 | Wed, Nov 25 | **Lecture 11: Solow Model** |
-| 49 | Wed, Dec 2 | **Lecture 12: Walras / Exchange Economy** + introduction to the model project and calibration |
-| 50 | Wed, Dec 9 | **Lecture 13: Recap and Exam Preparation** |
+| 43 | Wed, Oct 21 | **In person — Lecture 6: Optimization:** transition session with exercises, live coding and questions |
+| 44 | Wed, Oct 28 | **No in-person lecture — videos:** Lecture 7: Root-finding and Interpolation |
+| 45 | Wed, Nov 4 | **In person — Lecture 8: Random Numbers and Simulation:** exercises, live coding and questions covering Lectures 7-8 |
+| 46 | Wed, Nov 11 | **No in-person lecture — videos:** Lecture 9: Descriptive Economics I |
+| 47 | Wed, Nov 18 | **In person — Lecture 10: Descriptive Economics II:** exercises covering Lectures 9-10, introduction to the data project and project questions |
+| 48 | Wed, Nov 25 | **No in-person lecture — videos:** Lecture 11: Solow Model |
+| 49 | Wed, Dec 2 | **In person — Lecture 12: Walras / Exchange Economy:** introduction to the model project and calibration, exercises and questions covering Lectures 11-12 |
+| 50 | Wed, Dec 9 | **In person — Lecture 13: Recap and Exam Preparation** |
 
 ### September 9
 
@@ -85,7 +100,7 @@ The early classes combine small programming problem sets with DataCamp. Later cl
 | 51 | **Model project workshop + recap and exam preparation** |
 
 The problem set number matches the numbered folder in the exercise repository, and both follow the lecture numbering.
-Each exercise class works on the problem set for the *previous* week's lecture.
+Each exercise class works on the problem set for the *previous* week's scheduled lecture topic, whether covered in person or in videos.
 
 ---
 
